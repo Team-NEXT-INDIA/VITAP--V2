@@ -14,7 +14,6 @@ class Onboarding extends StatelessWidget {
     double ffem = fem * 1;
     return Scaffold(
       body: Container(
-
         decoration: const BoxDecoration (
           color: Color(0xff000000),
           image: DecorationImage (
