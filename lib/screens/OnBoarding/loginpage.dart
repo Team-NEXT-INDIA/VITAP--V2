@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Onboarding extends StatelessWidget {
@@ -28,7 +27,7 @@ class Onboarding extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 36*fem),
+              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 32*fem),
               width: double.infinity,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -41,7 +40,7 @@ class Onboarding extends StatelessWidget {
                     child: Stack(
                       children: [
                         Positioned(
-                          // ellipse139gix (80:163)
+
                           left: 46*fem,
                           top: 86*fem,
                           child: Align(
@@ -57,7 +56,6 @@ class Onboarding extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          // firstplacemedal1ZAU (80:164)
                           left: 0*fem,
                           top: 0*fem,
                           child: Align(
@@ -82,7 +80,6 @@ class Onboarding extends StatelessWidget {
                         children: [
 
                           Positioned(
-                            // graduationhat2KBa (80:165)
                             left: 30*fem,
                             top: 0*fem,
                             child: Align(
@@ -104,7 +101,8 @@ class Onboarding extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.fromLTRB(30*fem, 79*fem, 29*fem, 101*fem),
+              height: MediaQuery.of(context).size.height * 0.60,
+              padding: EdgeInsets.fromLTRB(30*fem, 79*fem, 29*fem, 0),
               width: double.infinity,
               decoration: BoxDecoration (
                 color: const Color(0xffffffff),
@@ -148,7 +146,7 @@ class Onboarding extends StatelessWidget {
                       maxWidth: 331*fem,
                     ),
                     child: Text(
-                      'Now access portal using our app\nand get access to all your Credentials with one -Click',
+                      'Now access your essentials using our app\nand get access all the academic details',
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont (
                         'Poppins',
