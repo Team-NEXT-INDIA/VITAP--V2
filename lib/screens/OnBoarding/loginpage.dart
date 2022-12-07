@@ -8,7 +8,7 @@ class Onboarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double baseWidth = 418;
+    double baseWidth = 394;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 1;
     return Scaffold(
@@ -128,7 +128,7 @@ class Onboarding extends StatelessWidget {
                         maxWidth: 242*fem,
                       ),
                       child: Text(
-                        'Start using the Official app',
+                        'Start using the app',
                         textAlign: TextAlign.center,
                         style: SafeGoogleFont (
                           'Poppins',
