@@ -3,6 +3,8 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:myapp/utils.dart';
 
+import '../LoginPage/loginpage.dart';
+
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
 
@@ -26,68 +28,46 @@ class Onboarding extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 32*fem),
-              width: double.infinity,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
+            Expanded(
+              flex: 1,
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 32*fem),
+                width: double.infinity,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
 
-                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 30*fem, 0*fem),
-                    width: 138*fem,
-                    height: 138*fem,
-                    child: Stack(
-                      children: [
-                        Positioned(
-
-                          left: 46*fem,
-                          top: 86*fem,
-                          child: Align(
-                            child: SizedBox(
-                              width: 63*fem,
-                              height: 47*fem,
-                              child: Image.asset(
-                                'assets/images/on-boarding/ellipse-139.png',
-                                width: 63*fem,
-                                height: 47*fem,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 0*fem,
-                          top: 0*fem,
-                          child: Align(
-                            child: SizedBox(
-                              width: 138*fem,
-                              height: 138*fem,
-                              child: Image.asset(
-                                'assets/images/on-boarding/first-place-medal-1.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      width: 300.1*fem,
-                      height: 300.1*fem,
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 30*fem, 0*fem),
+                      width: 138*fem,
+                      height: 138*fem,
                       child: Stack(
                         children: [
-
                           Positioned(
-                            left: 30*fem,
+
+                            left: 46*fem,
+                            top: 86*fem,
+                            child: Align(
+                              child: SizedBox(
+                                width: 63*fem,
+                                height: 47*fem,
+                                child: Image.asset(
+                                  'assets/images/on-boarding/ellipse-139.png',
+                                  width: 63*fem,
+                                  height: 47*fem,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 0*fem,
                             top: 0*fem,
                             child: Align(
                               child: SizedBox(
-                                width: 300.1*fem,
-                                height: 300.1*fem,
+                                width: 138*fem,
+                                height: 138*fem,
                                 child: Image.asset(
-                                  'assets/images/on-boarding/graduation-hat-2.png',
+                                  'assets/images/on-boarding/first-place-medal-1.png',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -96,12 +76,37 @@ class Onboarding extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
-                ],
+                    Expanded(
+                      child: Container(
+                        width: 300.1*fem,
+                        height: 300.1*fem,
+                        child: Stack(
+                          children: [
+
+                            Positioned(
+                              left: 30*fem,
+                              top: 0*fem,
+                              child: Align(
+                                child: SizedBox(
+                                  width: 300.1*fem,
+                                  height: 300.1*fem,
+                                  child: Image.asset(
+                                    'assets/images/on-boarding/graduation-hat-2.png',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 0.60,
+              height: MediaQuery.of(context).size.height * 0.6,
               padding: EdgeInsets.fromLTRB(30*fem, 79*fem, 29*fem, 0),
               width: double.infinity,
               decoration: BoxDecoration (
@@ -179,7 +184,10 @@ class Onboarding extends StatelessWidget {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const LoginPage()),
+                          );
                         }, // Image tapped
                         splashColor: Colors.white10, //
                         child: Ink.image(

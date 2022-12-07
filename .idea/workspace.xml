@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d586777-309c-4f18-b847-7862963683a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/screens/LoginPage/Components/FacultyLogin.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/LoginPage/Components/StudentLogin.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/LoginPage/testt.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/OnBoarding/loginpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/OnBoarding/loginpage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
