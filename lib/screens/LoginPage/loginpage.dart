@@ -40,6 +40,7 @@ class _loginPageState extends State<LoginPage>
       },
       child: Scaffold(
         body: SingleChildScrollView(
+          // physics: NeverScrollableScrollPhysics(),
           child: Container(
             decoration: const BoxDecoration(
               color: Color(0xff000000),
@@ -127,7 +128,7 @@ class _loginPageState extends State<LoginPage>
                   ),
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.57,
+                  height: MediaQuery.of(context).size.height * 0.61,
                   padding: EdgeInsets.fromLTRB(30 * fem, 40 * fem, 29 * fem, 0),
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -266,7 +267,7 @@ class _Tab1State extends State<Tab1> {
                 autofocus: false,
                 obscureText: false,
                 decoration: const InputDecoration(
-                  hintText: 'type your username',
+                  hintText: 'Type your username',
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xffECECEC),
@@ -384,7 +385,13 @@ class _Tab1State extends State<Tab1> {
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomePage()),
+                  );
+                },
                 color: const Color(0xff002C64),
                 elevation: 20,
                 splashColor: const Color(0x5c003e8a),

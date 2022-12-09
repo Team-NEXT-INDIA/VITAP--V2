@@ -14,6 +14,7 @@ class Onboarding extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 1;
     return Scaffold(
+      backgroundColor: Colors.orange,
       body: Container(
         decoration: const BoxDecoration (
           color: Color(0xff000000),
