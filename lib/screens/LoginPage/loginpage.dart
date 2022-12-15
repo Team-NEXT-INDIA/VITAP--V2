@@ -39,6 +39,7 @@ class _loginPageState extends State<LoginPage>
       },
       child: Scaffold(
         body: SingleChildScrollView(
+          // physics: NeverScrollableScrollPhysics(),
           child: Container(
             decoration: const BoxDecoration(
               color: Color(0xff000000),
@@ -126,7 +127,7 @@ class _loginPageState extends State<LoginPage>
                   ),
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.57,
+                  height: MediaQuery.of(context).size.height * 0.61,
                   padding: EdgeInsets.fromLTRB(30 * fem, 40 * fem, 29 * fem, 0),
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -217,8 +218,6 @@ class Tab1 extends StatefulWidget {
 class _Tab1State extends State<Tab1> {
   bool _isVisible = false;
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -253,7 +252,7 @@ class _Tab1State extends State<Tab1> {
                 autofocus: false,
                 obscureText: false,
                 decoration: const InputDecoration(
-                  hintText: 'type your username',
+                  hintText: 'Type your username',
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0xffECECEC),
@@ -373,8 +372,7 @@ class _Tab1State extends State<Tab1> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) =>  Layout()),
+                    MaterialPageRoute(builder: (context) => Layout()),
                   );
                 },
                 color: const Color(0xff002C64),
@@ -584,8 +582,7 @@ class _Tab2State extends State<Tab2> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) =>  Layout()),
+                        MaterialPageRoute(builder: (context) => Layout()),
                       );
                     },
                     color: const Color(0xff002C64),

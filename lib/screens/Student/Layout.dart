@@ -21,6 +21,15 @@ class _LayoutState extends State<Layout> {
   Widget build(BuildContext context) {
     // Border Radius for BottomNavigationBar
     const navBarDecoration = NavBarDecoration(
+        // boxShadow: [
+        //   BoxShadow(
+        //     offset: Offset(2, -5),
+        //     spreadRadius: -7,
+        //     blurRadius: 44,
+        //     color: Color.fromRGBO(33, 33, 33, 0.48),
+        //   )
+        //
+        // ],
       borderRadius: BorderRadius.only(
           topRight: Radius.circular(18.0), topLeft: Radius.circular(18.0)),
     );
@@ -28,6 +37,7 @@ class _LayoutState extends State<Layout> {
       body: PersistentTabView(
         context,
         controller: _controller,
+
         screens: const [
           HomePage(),
           TimetablePage(),
@@ -36,7 +46,10 @@ class _LayoutState extends State<Layout> {
         ],
 
         items: _navBarsItems(),
-        navBarStyle: NavBarStyle.style11,
+        navBarStyle: NavBarStyle.style3,
+        // navBarStyle: NavBarStyle.style9,
+        //  navBarStyle: NavBarStyle.style11,
+        // navBarStyle: NavBarStyle.style15,
         decoration: navBarDecoration,
         // navBarHeight: 56.0 = Default
       ),
@@ -58,7 +71,7 @@ class _LayoutState extends State<Layout> {
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.graph_circle),
+        icon: const Icon(Icons.analytics),
         title: ("Attendance"),
         activeColorPrimary: primaryColor,
         inactiveColorPrimary: CupertinoColors.systemGrey,

@@ -165,7 +165,7 @@ class _PromoSliderState extends State<PromoSlider> {
             disableCenter: true,
 
             pageSnapping: true,
-            height: 590,
+            height: 510,
             autoPlay: true,
             enlargeCenterPage: true,
             viewportFraction: 0.9,
