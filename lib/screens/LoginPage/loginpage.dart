@@ -2,9 +2,8 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/Student/HomePage.dart';
-
-import '../../utils.dart';
+import '../../utils/utils.dart';
+import '../Student/Layout.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -217,20 +216,8 @@ class Tab1 extends StatefulWidget {
 
 class _Tab1State extends State<Tab1> {
   bool _isVisible = false;
-  bool _isPasswordEightCharacters = false;
-  bool _hasPasswordOneNumber = false;
 
-  onPasswordChanged(String password) {
-    final numericRegex = RegExp(r'[0-9]');
 
-    setState(() {
-      _isPasswordEightCharacters = false;
-      if (password.length >= 8) _isPasswordEightCharacters = true;
-
-      _hasPasswordOneNumber = false;
-      if (numericRegex.hasMatch(password)) _hasPasswordOneNumber = true;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -324,7 +311,6 @@ class _Tab1State extends State<Tab1> {
             Padding(
               padding: const EdgeInsets.only(top: 8),
               child: TextFormField(
-                onChanged: (password) => onPasswordChanged(password),
                 obscureText: !_isVisible,
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
@@ -384,7 +370,13 @@ class _Tab1State extends State<Tab1> {
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  Layout()),
+                  );
+                },
                 color: const Color(0xff002C64),
                 elevation: 20,
                 splashColor: const Color(0x5c003e8a),
@@ -593,7 +585,7 @@ class _Tab2State extends State<Tab2> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()),
+                            builder: (context) =>  Layout()),
                       );
                     },
                     color: const Color(0xff002C64),
