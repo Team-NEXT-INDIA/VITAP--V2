@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/home/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/book-open_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/book_ftr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/clipboard_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/people_ftr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/pin_ftr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/users_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash_logo_svg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/FeatureCards.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyButton.dart" afterDir="false" />
+    <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added basic loginpage.dart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customs/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customs/theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/PromoView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/PromoView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +64,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6d586777-309c-4f18-b847-7862963683a3" name="Changes" comment="" />
+      <changelist id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added basic loginpage.dart" />
       <created>1669979080336</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

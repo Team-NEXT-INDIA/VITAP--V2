@@ -183,32 +183,38 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         )
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20,left: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                    AnimatedOpacity(
+                      opacity: _isScrolled ? 0.0 : 1.0,
+                      duration: Duration(milliseconds: 500),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20,left: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+
                           Text(
-                            "Welcome Back👋",
-                            style: SafeGoogleFont(
-                              'Poppins',
-                              fontSize:20,
-                              fontWeight: FontWeight.w200,
-                              height: 1 ,
-                              color: const Color(0xd3000000),
-                            ),
-                          ),
-                          Text(
-                            "Samuel Philip",
-                            style: SafeGoogleFont(
-                              'Poppins',
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              height: 1.5 ,
-                              color: const Color(0xd3000000),
-                            ),
-                          )
-                        ],
+                                "Welcome Back👋",
+                                style: SafeGoogleFont(
+                                  'Poppins',
+                                  fontSize:20,
+                                  fontWeight: FontWeight.w200,
+                                  height: 1 ,
+                                  color: const Color(0xd3000000),
+                                ),
+                              ),
+
+                            Text(
+                              "Samuel Philip",
+                              style: SafeGoogleFont(
+                                'Poppins',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                                height: 1.5 ,
+                                color: const Color(0xd3000000),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
