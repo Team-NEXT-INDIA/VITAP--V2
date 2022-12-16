@@ -5,7 +5,9 @@ import 'package:flutter/services.dart';
 
 
 Color primaryColor = const Color(0xFF386BF6);
-Color scaffoldBackground = const Color(0xffF9F9F9);
+Color scaffoldBackground2 = const Color(0xffF9F9F9);
+Color scaffoldBackground = const Color(0xffffffff);
+
 Color iconPrimary = const Color(0xff212121);
 
 

@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/screens/Student/Homepage/Homepage.dart';
@@ -13,9 +14,31 @@ class Layout extends StatefulWidget {
 }
 
 class _LayoutState extends State<Layout> {
+  late PageController _pageController;
+  int _selectedPage = 0;
 
-  final PersistentTabController _controller =
-      PersistentTabController(initialIndex: 0);
+  List<Widget> pages = [
+    HomePage(),
+    TimetablePage(),
+    HomePage(),
+    TimetablePage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedPage = index;
+      _pageController.jumpToPage(index);
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _pageController = PageController(initialPage: 0);
+
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,24 +57,41 @@ class _LayoutState extends State<Layout> {
           topRight: Radius.circular(18.0), topLeft: Radius.circular(18.0)),
     );
     return Scaffold(
-      body: PersistentTabView(
-        context,
-        controller: _controller,
-
-        screens: const [
-          HomePage(),
-          TimetablePage(),
-          HomePage(),
-          HomePage(),
+      body: PageView(
+        padEnds: false,
+          allowImplicitScrolling: true,
+        onPageChanged: (index) => setState(() { _selectedPage = index; }),
+        controller: _pageController,
+        children: [
+          ...pages
         ],
-
-        items: _navBarsItems(),
-        navBarStyle: NavBarStyle.style3,
-        // navBarStyle: NavBarStyle.style9,
-        //  navBarStyle: NavBarStyle.style11,
-        // navBarStyle: NavBarStyle.style15,
-        decoration: navBarDecoration,
-        // navBarHeight: 56.0 = Default
+      ),
+      bottomNavigationBar: FlashyTabBar(
+        selectedIndex: _selectedPage,
+        showElevation: false,
+        onItemSelected: (index) => _onItemTapped(index),
+        items: [
+          FlashyTabBarItem(
+            activeColor: primaryColor,
+            icon: const Icon(CupertinoIcons.home),
+            title: Text("Home"),
+          ),
+          FlashyTabBarItem(
+            activeColor: primaryColor,
+            icon: const Icon(CupertinoIcons.time),
+            title: Text("Timetable"),
+          ),
+          FlashyTabBarItem(
+            activeColor: primaryColor,
+            icon: const Icon(Icons.analytics),
+            title: Text("Attendance"),
+          ),
+          FlashyTabBarItem(
+            activeColor: primaryColor,
+            icon: const Icon(CupertinoIcons.person),
+            title: Text("Profile"),
+          ),
+        ],
       ),
     );
   }

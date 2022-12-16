@@ -43,6 +43,8 @@ dependencies:
   diamond_bottom_bar: ^1.0.0
   smooth_page_indicator: ^1.0.0+2
   animate_do: ^3.0.2
+  flutter_svg: ^1.1.6
+  flashy_tab_bar2: ^0.0.5
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +75,7 @@ flutter:
   assets:
     - assets/images/on-boarding/
     - assets/images/home/
+    - assets/images/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

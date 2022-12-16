@@ -15,10 +15,12 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'Flutter',
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
       home: Onboarding(),

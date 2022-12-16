@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
 
 class forYouButtons extends StatelessWidget {
@@ -21,17 +22,22 @@ class forYouButtons extends StatelessWidget {
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF4B7BFD), Color(0xFF174EE4)],
-                stops: [0, 1],
-                begin: AlignmentDirectional(1, -0.64),
-                end: AlignmentDirectional(-1, 0.64),
+              // gradient: const LinearGradient(
+              //   colors: [Color(0xFF4B7BFD), Color(0xFF174EE4)],
+              //   stops: [0, 1],
+              //   begin: AlignmentDirectional(1, -0.64),
+              //   end: AlignmentDirectional(-1, 0.64),
+              // ),
+              color: Colors.white,
+              border: Border.all(
+                color: Colors.black38,
+                width: 0.2
               ),
               borderRadius: BorderRadius.circular(7),
             ),
-            child: const Icon(
+            child:  Icon(
               Icons.bookmark_border,
-              color: Colors.white,
+              color: primaryColor,
             ),
           ),
           Text(
