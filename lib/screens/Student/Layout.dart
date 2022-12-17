@@ -2,6 +2,8 @@ import 'dart:ui';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:myapp/screens/Student/Homepage/Homepage.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
@@ -18,10 +20,10 @@ class _LayoutState extends State<Layout> {
   int _selectedPage = 0;
 
   List<Widget> pages = [
-    HomePage(),
-    TimetablePage(),
-    HomePage(),
-    TimetablePage(),
+    const HomePage(),
+    const TimetablePage(),
+    const HomePage(),
+    const TimetablePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -66,33 +68,75 @@ class _LayoutState extends State<Layout> {
           ...pages
         ],
       ),
-      bottomNavigationBar: FlashyTabBar(
-        selectedIndex: _selectedPage,
-        showElevation: false,
-        onItemSelected: (index) => _onItemTapped(index),
-        items: [
-          FlashyTabBarItem(
-            activeColor: primaryColor,
-            icon: const Icon(CupertinoIcons.home),
-            title: Text("Home"),
-          ),
-          FlashyTabBarItem(
-            activeColor: primaryColor,
-            icon: const Icon(CupertinoIcons.time),
-            title: Text("Timetable"),
-          ),
-          FlashyTabBarItem(
-            activeColor: primaryColor,
-            icon: const Icon(Icons.analytics),
-            title: Text("Attendance"),
-          ),
-          FlashyTabBarItem(
-            activeColor: primaryColor,
-            icon: const Icon(CupertinoIcons.person),
-            title: Text("Profile"),
-          ),
-        ],
-      ),
+      bottomNavigationBar:
+      // FlashyTabBar(
+      //   backgroundColor: Colors.white,
+      //   selectedIndex: _selectedPage,
+      //   showElevation: true,
+      //   onItemSelected: (index) => _onItemTapped(index),
+      //   items: [
+      //     FlashyTabBarItem(
+      //       activeColor: primaryColor,
+      //       icon: const Icon(CupertinoIcons.home),
+      //       title: Text("Home", style: TextStyle(fontWeight: FontWeight.w400),),
+      //     ),
+      //     FlashyTabBarItem(
+      //       activeColor: primaryColor,
+      //       icon: const Icon(CupertinoIcons.time),
+      //       title: Text("Timetable",style: TextStyle(fontWeight: FontWeight.w400)),
+      //     ),
+      //     FlashyTabBarItem(
+      //       activeColor: primaryColor,
+      //       icon: const Icon(Icons.analytics),
+      //       title: Text("Attendance",style: TextStyle(fontWeight: FontWeight.w400)),
+      //     ),
+      //     FlashyTabBarItem(
+      //       activeColor: primaryColor,
+      //       icon: const Icon(CupertinoIcons.person),
+      //       title: Text("Profile",style: TextStyle(fontWeight: FontWeight.w400)),
+      //     ),
+      //   ],
+      // ),
+      Padding(
+        padding:
+        const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+        child: GNav(
+            selectedIndex: _selectedPage,
+            onTabChange: (index) => _onItemTapped(index),
+            color: Colors.grey[500]!,
+            activeColor: const Color(0xff386BF6),
+            rippleColor: const Color(0xffD4D9E7),
+            hoverColor: const Color(0xffD4D9E7),
+            iconSize: 22,
+            textStyle: const TextStyle(fontSize: 14,color: Color(0xff386BF6)),
+            tabBackgroundColor: const Color(0xffD4D9E7),
+            padding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 13),
+            duration: const Duration(milliseconds: 600),
+            tabs: [
+              const GButton(
+
+                icon: LineIcons.home,
+                text: (" Home"),
+              ),
+              const GButton(
+
+                icon:  LineIcons.calendarAlt,
+                text: (" Timetable"),
+              ),
+              const GButton(
+
+                icon:  Icons.analytics,
+                text: (" Attendance"),
+              ),
+              const GButton(
+
+                icon: LineIcons.userAlt,
+                text: ' Profile',
+              )
+            ]
+        ),
+      )
     );
   }
 

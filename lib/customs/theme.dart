@@ -9,6 +9,7 @@ Color scaffoldBackground2 = const Color(0xffF9F9F9);
 Color scaffoldBackground = const Color(0xffffffff);
 
 Color iconPrimary = const Color(0xff212121);
+Color footerBackground = const  Color(0xFFF0F0F0);
 
 
 

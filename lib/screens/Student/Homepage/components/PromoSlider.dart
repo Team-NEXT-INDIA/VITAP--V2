@@ -33,21 +33,21 @@ class _PromoSliderState extends State<PromoSlider> {
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
-                tag: 'mainslider',
+                tag: 'mainslider1',
                 child: Material(
                   elevation: 18,
                   color: Colors.transparent,
                   child: Container(
-                    decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(2, 22),
-                          spreadRadius: -5,
-                          blurRadius: 47,
-                          color: Color.fromRGBO(81, 81, 81, 0.29),
-                        ),
-                      ],
-                    ),
+                    // decoration: BoxDecoration(
+                    //   boxShadow: const [
+                    //     BoxShadow(
+                    //       offset: Offset(2, 22),
+                    //       spreadRadius: -5,
+                    //       blurRadius: 47,
+                    //       color: Color.fromRGBO(81, 81, 81, 0.29),
+                    //     ),
+                    //   ],
+                    // ),
                     margin: const EdgeInsets.all(6),
                     height: 550,
                     child: InkWell(
@@ -171,21 +171,21 @@ class _PromoSliderState extends State<PromoSlider> {
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
-                tag: 'mainslider',
+                tag: 'mainslider2',
                 child: Material(
                   elevation: 18,
                   color: Colors.transparent,
                   child: Container(
-                    decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(2, 22),
-                          spreadRadius: -5,
-                          blurRadius: 47,
-                          color: Color.fromRGBO(81, 81, 81, 0.29),
-                        ),
-                      ],
-                    ),
+                    // decoration: BoxDecoration(
+                    //   boxShadow: const [
+                    //     BoxShadow(
+                    //       offset: Offset(2, 22),
+                    //       spreadRadius: -5,
+                    //       blurRadius: 47,
+                    //       color: Color.fromRGBO(81, 81, 81, 0.29),
+                    //     ),
+                    //   ],
+                    // ),
                     margin: const EdgeInsets.all(6),
                     height: 550,
                     child: InkWell(
@@ -309,21 +309,21 @@ class _PromoSliderState extends State<PromoSlider> {
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
-                tag: 'mainslider',
+                tag: 'mainslider3',
                 child: Material(
                   elevation: 18,
                   color: Colors.transparent,
                   child: Container(
-                    decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(2, 22),
-                          spreadRadius: -5,
-                          blurRadius: 47,
-                          color: Color.fromRGBO(81, 81, 81, 0.29),
-                        ),
-                      ],
-                    ),
+                    // decoration: BoxDecoration(
+                    //   boxShadow: const [
+                    //     BoxShadow(
+                    //       offset: Offset(2, 22),
+                    //       spreadRadius: -5,
+                    //       blurRadius: 47,
+                    //       color: Color.fromRGBO(81, 81, 81, 0.29),
+                    //     ),
+                    //   ],
+                    // ),
                     margin: const EdgeInsets.all(6),
                     height: 550,
                     child: InkWell(

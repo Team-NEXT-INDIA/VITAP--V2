@@ -1,7 +1,9 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/screens/Student/Homepage/components/FeatureCards.dart';
+import 'package:myapp/screens/Student/Homepage/components/Footer.dart';
 import 'package:myapp/screens/Student/Homepage/components/MyButton.dart';
 import 'package:myapp/screens/Student/Homepage/components/PromoSlider.dart';
 import 'package:myapp/utils/utils.dart';
@@ -28,26 +30,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late ScrollController _scrollController;
   bool _isScrolled = false;
 
-  List<dynamic> productList = [];
-  List<String> size = [
-    "S",
-    "M",
-    "L",
-    "XL",
-  ];
-
-  List<Color> colors = [
-    Colors.black,
-    Colors.purple,
-    Colors.orange.shade200,
-    Colors.blueGrey,
-    Color(0xFFFFC1D9),
-  ];
-
-  int _selectedColor = 0;
-  int _selectedSize = 1;
-
-  var selectedRange = RangeValues(150.00, 1500.00);
 
   @override
   void initState() {
@@ -78,26 +60,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         controller: _scrollController,
         slivers: [
           SliverAppBar(
-            // collapsedHeight: 70,
-            // toolbarHeight: 10,
-            // automaticallyImplyLeading: false,
-            // expandedHeight: 149.0,
-            // elevation: 0,
-            // pinned: false,
-            // floating: true,
-            // stretch: true,
-            expandedHeight: 149.0,
-            collapsedHeight: 60,
-            surfaceTintColor: Color(0xffF9F9F9),
+            collapsedHeight: 10,
+            toolbarHeight: 10,
             automaticallyImplyLeading: false,
+            expandedHeight: 149.0,
             elevation: 0,
             pinned: true,
-            floating: true,
-            centerTitle: true,
+            floating: false,
             stretch: true,
-            backgroundColor: Colors.grey.shade50,
+            // expandedHeight: 149.0,
+            // collapsedHeight: 60,
+            surfaceTintColor: Color(0xffF9F9F9),
+            // automaticallyImplyLeading: false,
+            // elevation: 0,
+            // pinned: true,
+            // floating: false,
+            // centerTitle: true,
+            // stretch: true,
+            backgroundColor: Color(0xdfffffff),
+            // bottom: AppBar(
+            //
+            // ),
             flexibleSpace: FlexibleSpaceBar(
-              expandedTitleScale : 9,
+              expandedTitleScale : 1,
               collapseMode: CollapseMode.pin,
               stretchModes: [
                 StretchMode.zoomBackground,
@@ -238,8 +223,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     addVerticalSpace(20),
                     Padding(
                       padding: const EdgeInsets.only(
-                          top: 0, left: 17, right: 17, bottom: 50),
+                          top: 0, left: 17, right: 17, bottom: 20),
                       child: Container(
+                        height: MediaQuery.of(context).size.width * 0.6,
                         decoration: containerDecoration,
                         child: Padding(
                           padding: const EdgeInsets.all(20),
@@ -268,49 +254,36 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   )
                                 ],
                               ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                      ],
-                                    ),
+                              addVerticalSpace(10),
+                              Expanded(
+                                child: GridView(
+                                  padding: EdgeInsets.zero,
+                                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 4,
+                                    crossAxisSpacing: 1,
+                                    mainAxisSpacing: 5,
+                                    childAspectRatio: 1,
                                   ),
-                                ],
+                                  primary: false,
+                                  children: <Widget>[
+                                    forYouButtons(btnName: 'Notes',icon: Icons.note_alt_outlined,),
+                                    forYouButtons(btnName: 'Attendance',icon: Icons.analytics_outlined,),
+                                    forYouButtons(btnName: 'Chat',icon: Icons.chat_bubble_outline,),
+                                    forYouButtons(btnName: 'Grades',icon: Icons.grade_outlined,),
+                                    forYouButtons(btnName: 'Messages',icon: Icons.message_outlined,),
+                                    forYouButtons(btnName: 'Materials',icon: Icons.file_copy,),
+                                    forYouButtons(btnName: 'Fees',icon: Icons.payment_outlined,),
+                                    forYouViewAll(),
+                                  ],
+                                ),
                               ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                        forYouButtons(),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              )
                             ],
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    addVerticalSpace(20),
+                    footerBuild()
                   ],
                 ),
               ]
