@@ -101,15 +101,16 @@ class _LayoutState extends State<Layout> {
         padding:
         const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
         child: GNav(
+          backgroundColor: Color(0xfffdfdfd),
             selectedIndex: _selectedPage,
             onTabChange: (index) => _onItemTapped(index),
-            color: Colors.grey[500]!,
+            color: Color(0xff8389a5),
             activeColor: const Color(0xff386BF6),
             rippleColor: const Color(0xffD4D9E7),
             hoverColor: const Color(0xffD4D9E7),
             iconSize: 22,
             textStyle: const TextStyle(fontSize: 14,color: Color(0xff386BF6)),
-            tabBackgroundColor: const Color(0xffD4D9E7),
+            tabBackgroundColor:  Color(0xffD4D9E7),
             padding:
             const EdgeInsets.symmetric(horizontal: 20, vertical: 13),
             duration: const Duration(milliseconds: 600),
@@ -121,12 +122,12 @@ class _LayoutState extends State<Layout> {
               ),
               const GButton(
 
-                icon:  LineIcons.calendarAlt,
+                icon:  LineIcons.calendar,
                 text: (" Timetable"),
               ),
               const GButton(
 
-                icon:  Icons.analytics,
+                icon:  LineIcons.pieChart,
                 text: (" Attendance"),
               ),
               const GButton(

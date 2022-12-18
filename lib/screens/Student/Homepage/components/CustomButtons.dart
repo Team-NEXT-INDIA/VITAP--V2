@@ -21,6 +21,7 @@ class forYouButtons extends StatelessWidget {
       children: [
         Material(
           elevation: 19.0,
+          borderOnForeground: false,
           borderRadius: BorderRadius.circular(7),
           color: Colors.white,
           child: InkWell(

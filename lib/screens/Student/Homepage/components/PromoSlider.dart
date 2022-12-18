@@ -2,9 +2,7 @@ import 'dart:ui';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
 import '../PromoView.dart';
 
@@ -28,7 +26,7 @@ class _PromoSliderState extends State<PromoSlider> {
         carouselController: _PromoCarouselController,
         items: [
           Container(
-            margin: EdgeInsets.only(bottom: 50),
+            margin: EdgeInsets.only(bottom: 20),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(
@@ -166,7 +164,7 @@ class _PromoSliderState extends State<PromoSlider> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 50),
+            margin: EdgeInsets.only(bottom: 20),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(
@@ -304,7 +302,7 @@ class _PromoSliderState extends State<PromoSlider> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 50),
+            margin: EdgeInsets.only(bottom: 20),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
               child: Hero(

@@ -2,10 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:myapp/screens/Student/Homepage/components/FeatureCards.dart';
 import 'package:myapp/screens/Student/Homepage/components/Footer.dart';
 import 'package:myapp/screens/Student/Homepage/components/MyButton.dart';
+import 'package:myapp/screens/Student/Homepage/components/MyFacultyBuild.dart';
 import 'package:myapp/screens/Student/Homepage/components/PromoSlider.dart';
+import 'package:myapp/screens/Student/Homepage/components/UpcomingEvents.dart';
 import 'package:myapp/utils/utils.dart';
 
 import '../../../customs/animation.dart';
@@ -63,7 +66,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             collapsedHeight: 10,
             toolbarHeight: 10,
             automaticallyImplyLeading: false,
-            expandedHeight: 149.0,
+            expandedHeight: 158.0,
             elevation: 0,
             pinned: true,
             floating: false,
@@ -99,7 +102,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            top: 35,
+                            top: 45,
                             left: 20,
                           ),
                           child: Column(
@@ -118,7 +121,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       border: Border.all(
                                         color: Color(0xffefefef),
                                         width:
-                                        2, //                   <--- border width here
+                                        0.8, //                   <--- border width here
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
@@ -138,7 +141,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           child: Column(
                             children: [
                               Material(
-                                elevation: 0,
+                                elevation: 19,
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.white,
                                 child: InkWell(
@@ -153,7 +156,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       border: Border.all(
                                         color: Color(0xffefefef),
                                         width:
-                                            2, //                   <--- border width here
+                                            0.8, //                   <--- border width here
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),
@@ -219,8 +222,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     PromoSlider(),
                     MyButtonsView(),
                     addVerticalSpace(20),
+
+                    upcomingEventsBuild(),
+                    addVerticalSpace(20),
                     FeatureCardsWidget(),
                     addVerticalSpace(20),
+
+                    myFacultyBuild(),
+                    addVerticalSpace(20),
+
                     Padding(
                       padding: const EdgeInsets.only(
                           top: 0, left: 17, right: 17, bottom: 20),
@@ -266,12 +276,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   ),
                                   primary: false,
                                   children: <Widget>[
-                                    forYouButtons(btnName: 'Notes',icon: Icons.note_alt_outlined,),
-                                    forYouButtons(btnName: 'Attendance',icon: Icons.analytics_outlined,),
+                                    forYouButtons(btnName: 'Notes',icon: LineIcons.file,),
+                                    forYouButtons(btnName: 'Attendance',icon: LineIcons.pieChart,),
                                     forYouButtons(btnName: 'Chat',icon: Icons.chat_bubble_outline,),
                                     forYouButtons(btnName: 'Grades',icon: Icons.grade_outlined,),
                                     forYouButtons(btnName: 'Messages',icon: Icons.message_outlined,),
-                                    forYouButtons(btnName: 'Materials',icon: Icons.file_copy,),
+                                    forYouButtons(btnName: 'Downloads',icon: Icons.file_copy,),
                                     forYouButtons(btnName: 'Fees',icon: Icons.payment_outlined,),
                                     forYouViewAll(),
                                   ],
