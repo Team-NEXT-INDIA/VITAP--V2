@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   void _listenToScrollChange() {
-    if (_scrollController.offset >= 100.0) {
+    if (_scrollController.offset >= 10.0) {
       setState(() {
         _isScrolled = true;
       });
@@ -63,10 +63,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         controller: _scrollController,
         slivers: [
           SliverAppBar(
-            collapsedHeight: 10,
-            toolbarHeight: 10,
+            collapsedHeight: 7,
+            toolbarHeight:1,
             automaticallyImplyLeading: false,
-            expandedHeight: 158.0,
+            expandedHeight: 159.0,
             elevation: 0,
             pinned: true,
             floating: false,
@@ -97,79 +97,83 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 45,
-                            left: 20,
-                          ),
-                          child: Column(
-                            children: [
-                              Material(
-                                borderRadius: BorderRadius.circular(50),
-                                color: Colors.white,
-                                elevation: 0,
-                                child: InkWell(
+                    AnimatedOpacity(
+                      opacity: _isScrolled ? 0.0 : 1.0,
+                      duration: Duration(milliseconds: 900),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 45,
+                              left: 20,
+                            ),
+                            child: Column(
+                              children: [
+                                Material(
                                   borderRadius: BorderRadius.circular(50),
-                                  onTap: () {},
-                                  child: Container(
-                                    width: 55,
-                                    height: 55,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color(0xffefefef),
-                                        width:
-                                        0.8, //                   <--- border width here
+                                  color: Colors.white,
+                                  elevation: 0,
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(50),
+                                    onTap: () {},
+                                    child: Container(
+                                      width: 55,
+                                      height: 55,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Color(0xffefefef),
+                                          width:
+                                          0.8, //                   <--- border width here
+                                        ),
+                                        borderRadius: BorderRadius.circular(25),
                                       ),
-                                      borderRadius: BorderRadius.circular(25),
+                                      child: const Icon(Icons.notifications_none_sharp,
+                                          color: Color(0xff212121)),
                                     ),
-                                    child: const Icon(Icons.notifications_none_sharp,
-                                        color: Color(0xff212121)),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 35,
-                            right: 20,
-                          ),
-                          child: Column(
-                            children: [
-                              Material(
-                                elevation: 19,
-                                borderRadius: BorderRadius.circular(50),
-                                color: Colors.white,
-                                child: InkWell(
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 35,
+                              right: 20,
+                            ),
+                            child: Column(
+                              children: [
+                                Material(
+                                  elevation: 19,
                                   borderRadius: BorderRadius.circular(50),
-                                  onTap: () {
-                                    showMaterialBanner();
-                                  },
-                                  child: Container(
-                                    width: 55,
-                                    height: 55,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color(0xffefefef),
-                                        width:
-                                            0.8, //                   <--- border width here
+                                  color: Colors.white,
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(50),
+                                    onTap: () {
+                                      showMaterialBanner();
+                                    },
+                                    child: Container(
+                                      width: 55,
+                                      height: 55,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Color(0xffefefef),
+                                          width:
+                                              0.8, //                   <--- border width here
+                                        ),
+                                        borderRadius: BorderRadius.circular(25),
                                       ),
-                                      borderRadius: BorderRadius.circular(25),
+                                      child: const Icon(Icons.person_outline_outlined,
+                                          color: Color(0xff212121)),
                                     ),
-                                    child: const Icon(Icons.person_outline_outlined,
-                                        color: Color(0xff212121)),
                                   ),
                                 ),
-                              ),
 
-                            ],
-                          ),
-                        )
-                      ],
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     AnimatedOpacity(
                       opacity: _isScrolled ? 0.0 : 1.0,
@@ -183,7 +187,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           Text(
                                 "Welcome Back👋",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize:20,
                                   fontWeight: FontWeight.w200,
                                   height: 1 ,
@@ -194,7 +198,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             Text(
                               "Samuel Philip",
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
                                 height: 1.5 ,
@@ -247,7 +251,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                   Text(
                                     "FOR YOU",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff0F2552),
@@ -267,11 +271,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               addVerticalSpace(10),
                               Expanded(
                                 child: GridView(
+                                  physics: NeverScrollableScrollPhysics(),
                                   padding: EdgeInsets.zero,
                                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 4,
-                                    crossAxisSpacing: 1,
-                                    mainAxisSpacing: 5,
+                                    crossAxisSpacing: 10,
+                                    mainAxisSpacing: 10,
                                     childAspectRatio: 1,
                                   ),
                                   primary: false,

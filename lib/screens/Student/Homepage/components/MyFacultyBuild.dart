@@ -18,7 +18,7 @@ class myFacultyBuild extends StatelessWidget {
                   Text(
                     "Your Faculties",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xff43434E),
@@ -27,7 +27,7 @@ class myFacultyBuild extends StatelessWidget {
                   Text(
                     "(4)",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 10,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xffbebdc5),
@@ -46,7 +46,7 @@ class myFacultyBuild extends StatelessWidget {
                   child: Text(
                     "View",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       height: 1.5 ,
@@ -77,7 +77,7 @@ class myFacultyBuild extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
-                        height: MediaQuery.of(context).size.height * 0.12,
+                        height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(17),
 
@@ -118,7 +118,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -130,7 +130,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -157,7 +157,7 @@ class myFacultyBuild extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
-                        height: MediaQuery.of(context).size.height * 0.12,
+                        height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(17),
 
@@ -198,7 +198,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. Sibi Chakkaravarthy",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -210,7 +210,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "CB | 212",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -237,7 +237,7 @@ class myFacultyBuild extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
-                        height: MediaQuery.of(context).size.height * 0.12,
+                        height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(17),
 
@@ -278,7 +278,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -290,7 +290,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -317,7 +317,7 @@ class myFacultyBuild extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
-                        height: MediaQuery.of(context).size.height * 0.12,
+                        height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(17),
 
@@ -358,7 +358,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -370,7 +370,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Poppins',
+                                      'Open Sans',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),

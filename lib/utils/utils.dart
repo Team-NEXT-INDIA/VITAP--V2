@@ -57,7 +57,7 @@ TextStyle SafeGoogleFont(
     );
   } catch (ex) {
     return GoogleFonts.getFont(
-      "Poppins",
+      "Open Sans",
       textStyle: textStyle,
       color: color,
       backgroundColor: backgroundColor,

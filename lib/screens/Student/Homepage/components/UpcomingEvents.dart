@@ -20,7 +20,7 @@ class upcomingEventsBuild extends StatelessWidget {
                   Text(
                       "Upcoming Events",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xff43434E),
@@ -29,7 +29,7 @@ class upcomingEventsBuild extends StatelessWidget {
                   Text(
                     "(7)",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 10,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xffbebdc5),
@@ -48,7 +48,7 @@ class upcomingEventsBuild extends StatelessWidget {
                   child: Text(
                       "See All",
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       height: 1.5 ,
@@ -93,7 +93,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Internal",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff838383),
@@ -114,7 +114,7 @@ class upcomingEventsBuild extends StatelessWidget {
                                 Text(
                                   "34 Days Left",
                                   style: SafeGoogleFont(
-                                    'Poppins',
+                                    'Open Sans',
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xff43434E),
@@ -128,7 +128,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "New Year Celebrations",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -140,7 +140,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),
@@ -178,7 +178,7 @@ class upcomingEventsBuild extends StatelessWidget {
                             child: Text(
                                 "Internal",
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 8,
                                 fontWeight: FontWeight.w500,
                                 color: const Color(0xff838383),
@@ -199,7 +199,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               Text(
                                 "3 Days Left",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w600,
                                   color: const Color(0xff43434E),
@@ -213,7 +213,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "VITOPIA 2023",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -225,7 +225,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),
@@ -264,7 +264,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Internal",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff838383),
@@ -285,7 +285,7 @@ class upcomingEventsBuild extends StatelessWidget {
                                 Text(
                                   "34 Days Left",
                                   style: SafeGoogleFont(
-                                    'Poppins',
+                                    'Open Sans',
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xff43434E),
@@ -299,7 +299,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "VITOPIA 2023",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -311,7 +311,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),
@@ -349,7 +349,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Internal",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff838383),
@@ -370,7 +370,7 @@ class upcomingEventsBuild extends StatelessWidget {
                                 Text(
                                   "34 Days Left",
                                   style: SafeGoogleFont(
-                                    'Poppins',
+                                    'Open Sans',
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xff43434E),
@@ -384,7 +384,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "VITOPIA 2023",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -396,7 +396,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),
@@ -434,7 +434,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Internal",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff838383),
@@ -455,7 +455,7 @@ class upcomingEventsBuild extends StatelessWidget {
                                 Text(
                                   "34 Days Left",
                                   style: SafeGoogleFont(
-                                    'Poppins',
+                                    'Open Sans',
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xff43434E),
@@ -469,7 +469,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "VITOPIA 2023",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -481,7 +481,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),
@@ -519,7 +519,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Internal",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff838383),
@@ -540,7 +540,7 @@ class upcomingEventsBuild extends StatelessWidget {
                                 Text(
                                   "34 Days Left",
                                   style: SafeGoogleFont(
-                                    'Poppins',
+                                    'Open Sans',
                                     fontSize: 8,
                                     fontWeight: FontWeight.w600,
                                     color: const Color(0xff43434E),
@@ -554,7 +554,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "VITOPIA 2023",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xff43434E),
@@ -566,7 +566,7 @@ class upcomingEventsBuild extends StatelessWidget {
                               child: Text(
                                 "Official International Cultural fest of VITAP...",
                                 style: SafeGoogleFont(
-                                  'Poppins',
+                                  'Open Sans',
                                   fontSize: 8,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xff43434E),

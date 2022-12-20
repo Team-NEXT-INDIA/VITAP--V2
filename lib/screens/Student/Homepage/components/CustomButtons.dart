@@ -53,7 +53,7 @@ class forYouButtons extends StatelessWidget {
         Text(
           btnName,
           style: SafeGoogleFont(
-            'Poppins',
+            'Open Sans',
             fontSize: 11,
             fontWeight: FontWeight.w400,
             color: const Color(0xff0F2552),
@@ -125,7 +125,7 @@ class forYouViewAll extends StatelessWidget {
       Text(
         'View All',
         style: SafeGoogleFont(
-          'Poppins',
+          'Open Sans',
           fontSize: 11,
           fontWeight: FontWeight.w400,
           color: const Color(0xff0F2552),

@@ -237,7 +237,7 @@ class _Tab1State extends State<Tab1> {
                   child: Text(
                     'Username',
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xd3002179),
@@ -298,7 +298,7 @@ class _Tab1State extends State<Tab1> {
                   child: Text(
                     'Password',
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xd3002179),
@@ -444,7 +444,7 @@ class _Tab2State extends State<Tab2> {
                   child: Text(
                     'Faculty Username',
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xd3002179),
@@ -505,7 +505,7 @@ class _Tab2State extends State<Tab2> {
                   child: Text(
                     'Password',
                     style: SafeGoogleFont(
-                      'Poppins',
+                      'Open Sans',
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xd3002179),

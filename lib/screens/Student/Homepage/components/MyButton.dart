@@ -31,15 +31,11 @@ class _MyButtonsViewState extends State<MyButtonsView> {
 
                 width: containerwidth,
                 height: containerheight,
-                // decoration: BoxDecoration(
-                //   gradient: LinearGradient(
-                //     colors: [Color(0xFF4B7BFD), Color(0xFF174EE4)],
-                //     stops: [0, 1],
-                //     begin: AlignmentDirectional(0, -1),
-                //     end: AlignmentDirectional(0, 1),
-                //   ),
-                //   borderRadius: BorderRadius.circular(7),
-                // ),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    primaryBoxShadowLite
+                  ],
+                ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -57,7 +53,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Mentor",
                           style: SafeGoogleFont(
-                            'Poppins',
+                            'Open Sans',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,
@@ -80,6 +76,11 @@ class _MyButtonsViewState extends State<MyButtonsView> {
               child: Container(
                 width: containerwidth,
                 height: containerheight,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    primaryBoxShadowLite
+                  ],
+                ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -97,7 +98,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Courses",
                           style: SafeGoogleFont(
-                            'Poppins',
+                            'Open Sans',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,
@@ -121,6 +122,11 @@ class _MyButtonsViewState extends State<MyButtonsView> {
               child: Container(
                 width: containerwidth,
                 height: containerheight,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    primaryBoxShadowLite
+                  ],
+                ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -140,7 +146,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Receipts",
                           style: SafeGoogleFont(
-                            'Poppins',
+                            'Open Sans',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,

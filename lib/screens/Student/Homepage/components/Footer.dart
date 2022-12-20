@@ -14,6 +14,7 @@ class footerBuild extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.3,
       decoration: BoxDecoration(
         color: footerBackground,
+
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 30.0, top: 30),
@@ -22,7 +23,7 @@ class footerBuild extends StatelessWidget {
           children: [
             Text("Whoop\nIt up!",
               style: SafeGoogleFont(
-                'Poppins',
+                'Open Sans',
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: const Color(0xffAEAEAE),
@@ -30,7 +31,7 @@ class footerBuild extends StatelessWidget {
             ),
             Text("Crafted with love ❤  by\nStudents for Students ️",
               style: SafeGoogleFont(
-                'Poppins',
+                'Open Sans',
                 fontSize: 14,
                 fontWeight: FontWeight.w200,
                 color: const Color(0xffA0B1B8),

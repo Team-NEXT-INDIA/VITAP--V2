@@ -28,7 +28,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                 Text(
                   "Explore",
                   style: SafeGoogleFont(
-                    'Poppins',
+                    'Open Sans',
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: const Color(0xff43434E),
@@ -71,7 +71,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Trending 🔥',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xbbffffff),
@@ -80,7 +80,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Question Bank',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xffFFFFFF),
@@ -93,7 +93,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                         alignment: AlignmentDirectional(1, 0),
                         child: ImageIcon(
                           AssetImage("assets/images/icons/book_ftr.png"),
-                          color: Color(0xff727377),
+                          color: Colors.white,
                           size: 90,
                         ),
                       ),
@@ -130,7 +130,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Career Help',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xC8FFFFFF),
@@ -139,7 +139,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Alumni Connect',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -189,7 +189,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Lost Something?',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xC8FFFFFF),
@@ -198,7 +198,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Lost & Found',
                               style: SafeGoogleFont(
-                                'Poppins',
+                                'Open Sans',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
