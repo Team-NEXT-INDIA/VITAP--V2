@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:myapp/screens/Student/Homepage/Homepage.dart';
 
-
 import '../../customs/theme.dart';
 import 'TimetablePage/Timetablepage.dart';
 
@@ -19,10 +18,11 @@ class _LayoutState extends State<Layout> {
   int _selectedPage = 0;
 
   List<Widget> pages = [
-     const HomePage(),
-     const HomePage(),
-     const TimetablePage(),
-     const HomePage(),
+    const HomePage(),
+    const HomePage(),
+    const TimetablePage(),
+    const HomePage(),
+    const TimetablePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -40,65 +40,66 @@ class _LayoutState extends State<Layout> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       extendBody: false,
       body: PageView(
         padEnds: false,
-          allowImplicitScrolling: true,
-        onPageChanged: (index) => setState(() { _selectedPage = index; }),
+        allowImplicitScrolling: true,
+        onPageChanged: (index) => setState(() {
+          _selectedPage = index;
+        }),
         controller: _pageController,
-        children: [
-          ...pages
-        ],
+        children: [...pages],
       ),
       bottomNavigationBar: Container(
         height: 72,
         child: BottomNavigationBar(
-          showSelectedLabels: true,
-          enableFeedback: true,
-          currentIndex: _selectedPage,
-          selectedLabelStyle: TextStyle(
-            fontWeight: FontWeight.w600,
-                color: primaryColor,
-          ),
-          selectedItemColor: primaryColor,
-          unselectedItemColor: Color(0xff838aa6),
-          selectedFontSize: 12,
-          iconSize: 25,
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.fixed,
-          onTap:(index) => _onItemTapped(index),
-          items: _navBarsItems()
-        ),
+          elevation: 19,
+          // backgroundColor: Color(0xffEFF3FE),
+            showSelectedLabels: true,
+            enableFeedback: true,
+            currentIndex: _selectedPage,
+            selectedLabelStyle: TextStyle(
+              fontWeight: FontWeight.w600,
+              color: primaryColor,
+            ),
+            selectedItemColor: primaryColor,
+            unselectedItemColor: Color(0xff838aa6),
+            selectedFontSize: 10,
+            unselectedFontSize: 10,
+            iconSize: 25,
+            showUnselectedLabels: false,
+            type: BottomNavigationBarType.fixed,
+            onTap: (index) => _onItemTapped(index),
+            items: _navBarsItems()),
       ),
     );
   }
 
   List<BottomNavigationBarItem> _navBarsItems() {
     return [
-  const BottomNavigationBarItem(
-            icon: Icon(LineIcons.home),
-            label: 'Home',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(LineIcons.calendar),
-            label: 'Timetable',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(LineIcons.pieChart),
-            label: 'Attendance',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(LineIcons.userAlt),
-            label: 'Profile',
-          ),
-
+      const BottomNavigationBarItem(
+        icon: Icon(LineIcons.home),
+        label: 'Home',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(LineIcons.school),
+        label: 'Timetable',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(LineIcons.pieChart),
+        label: 'Attendance',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(LineIcons.calendarAlt),
+        label: 'Calender',
+      ),
+      const BottomNavigationBarItem(
+        icon: Icon(Icons.apps),
+        label: 'More',
+      ),
     ];
   }
-
-
 }

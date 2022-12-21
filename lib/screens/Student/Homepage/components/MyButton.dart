@@ -53,7 +53,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Mentor",
                           style: SafeGoogleFont(
-                            'Open Sans',
+                            'Poppins',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,
@@ -98,7 +98,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Courses",
                           style: SafeGoogleFont(
-                            'Open Sans',
+                            'Poppins',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,
@@ -146,7 +146,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                         Text(
                           "My Receipts",
                           style: SafeGoogleFont(
-                            'Open Sans',
+                            'Poppins',
                             fontSize: 12,
                             height: 2,
                             fontWeight: FontWeight.w500,

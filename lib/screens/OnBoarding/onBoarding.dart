@@ -136,7 +136,7 @@ class Onboarding extends StatelessWidget {
                         'Start using the app',
                         textAlign: TextAlign.center,
                         style: SafeGoogleFont(
-                          'Open Sans',
+                          'Poppins',
                           fontSize: 32 * ffem,
                           fontWeight: FontWeight.w700,
                           height: 1.5 * ffem / fem,
@@ -155,7 +155,7 @@ class Onboarding extends StatelessWidget {
                       'Now access your essentials using our app\nand get access all the academic details',
                       textAlign: TextAlign.center,
                       style: SafeGoogleFont(
-                        'Open Sans',
+                        'Poppins',
                         fontSize: 14 * ffem,
                         fontWeight: FontWeight.w300,
                         height: 1.5 * ffem / fem,

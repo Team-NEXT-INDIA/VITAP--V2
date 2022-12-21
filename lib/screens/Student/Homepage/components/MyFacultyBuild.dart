@@ -18,7 +18,7 @@ class myFacultyBuild extends StatelessWidget {
                   Text(
                     "Your Faculties",
                     style: SafeGoogleFont(
-                      'Open Sans',
+                      'Poppins',
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xff43434E),
@@ -27,7 +27,7 @@ class myFacultyBuild extends StatelessWidget {
                   Text(
                     "(4)",
                     style: SafeGoogleFont(
-                      'Open Sans',
+                      'Poppins',
                       fontSize: 10,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xffbebdc5),
@@ -46,7 +46,7 @@ class myFacultyBuild extends StatelessWidget {
                   child: Text(
                     "View",
                     style: SafeGoogleFont(
-                      'Open Sans',
+                      'Poppins',
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       height: 1.5 ,
@@ -118,7 +118,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -130,7 +130,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -198,7 +198,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. Sibi Chakkaravarthy",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -210,7 +210,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "CB | 212",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -278,7 +278,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -290,7 +290,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),
@@ -358,7 +358,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "Dr. E. Ajith Jubilson",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xff43434E),
@@ -370,7 +370,7 @@ class myFacultyBuild extends StatelessWidget {
                                   child: Text(
                                     "AB-2 | G02",
                                     style: SafeGoogleFont(
-                                      'Open Sans',
+                                      'Poppins',
                                       fontSize: 8,
                                       fontWeight: FontWeight.w500,
                                       color: const Color(0xff43434E),

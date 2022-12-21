@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
 
 class FeatureCardsWidget extends StatefulWidget {
@@ -28,7 +29,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                 Text(
                   "Explore",
                   style: SafeGoogleFont(
-                    'Open Sans',
+                    'Poppins',
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: const Color(0xff43434E),
@@ -71,7 +72,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Trending 🔥',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xbbffffff),
@@ -80,7 +81,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Question Bank',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xffFFFFFF),
@@ -107,7 +108,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
             padding: const EdgeInsets.only(left: 19.0),
             child: Material(
               borderRadius: BorderRadius.circular(7),
-              color: const Color(0xFF002C64),
+              color: secondaryBlue,
               child: InkWell(
                 borderRadius: BorderRadius.circular(7),
                 onTap: (){},
@@ -130,7 +131,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Career Help',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xC8FFFFFF),
@@ -139,7 +140,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Alumni Connect',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -189,7 +190,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Lost Something?',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: const Color(0xC8FFFFFF),
@@ -198,7 +199,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                             Text(
                               'Lost & Found',
                               style: SafeGoogleFont(
-                                'Open Sans',
+                                'Poppins',
                                 fontSize: 19,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,

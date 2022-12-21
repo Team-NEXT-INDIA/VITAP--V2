@@ -10,7 +10,7 @@ Color scaffoldBackground = const Color(0xffffffff);
 Color iconPrimary = const Color(0xff212121);
 Color footerBackground = const Color(0xFFF0F0F0);
 Color titlePrimary = const Color(0xff232323);
-
+Color secondaryBlue = const Color(0xFF002C64);
 //Box Shadow For Blue Primary
 
 var primaryBoxShadow = BoxShadow(
@@ -42,7 +42,14 @@ var containerDecoration = BoxDecoration(
 );
 
 
-
+const CarouselShadow = const [
+  BoxShadow(
+    offset: Offset(5, 22),
+    spreadRadius: 0.22,
+    blurRadius: 32,
+    color: Color.fromRGBO(162, 159, 159, 0.93),
+  )
+];
 
 var primaryGradient = BoxDecoration(
   gradient: LinearGradient(

@@ -26,507 +26,625 @@ class _TimetablePageState extends State<TimetablePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: scaffoldBackground,
-      //1
+      appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        title: Text(
+          'ATTENDANCE',
+          style: SafeGoogleFont(
+            'Poppins',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xd3000000),
+          ),
+        ),
+      ),
       body: CustomScrollView(
         slivers: <Widget>[
-          //2
-          SliverAppBar(
-            // show and hide SliverAppBar Title
-            automaticallyImplyLeading: false,
-            pinned: true,
-            snap: true,
-            centerTitle: false,
-            floating: true,
-            expandedHeight: 90,
-            backgroundColor: scaffoldBackground,
-            forceElevated: true,
-            surfaceTintColor: scaffoldBackground,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Center(
-                child: Text(
-                  'Attendance',
-                  style: SafeGoogleFont(
-                    'Open Sans',
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: titlePrimary,
-                  ),
-                ),
-              ),
-              titlePadding: EdgeInsetsDirectional.only(top: 50),
-              stretchModes: [StretchMode.blurBackground],
-            ),
-          ),
-          //3
-          SliverList(
-              delegate: SliverChildListDelegate([
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Filter by",
-                          style: SafeGoogleFont(
-                            'Open Sans',
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400,
-                            color: titlePrimary,
+          SliverToBoxAdapter(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Filter by",
+                        style: SafeGoogleFont(
+                          'Poppins',
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: titlePrimary,
+                        ),
+                      ),
+                      Wrap(
+                        spacing: 5.0,
+                        children: ExerciseFilter.values
+                            .map((ExerciseFilter exercise) {
+                          return FilterChip(
+                            backgroundColor: Color(0xffDEDFE1),
+                            label: Text(exercise.name),
+                            selected: _filters.contains(exercise.name),
+                            onSelected: (bool value) {
+                              setState(() {
+                                if (value) {
+                                  if (!_filters.contains(exercise.name)) {
+                                    _filters.add(exercise.name);
+                                  }
+                                } else {
+                                  _filters.removeWhere((String name) {
+                                    return name == exercise.name;
+                                  });
+                                }
+                              });
+                            },
+                          );
+                        }).toList(),
+                      ),
+                      addVerticalSpace(16),
+                      Material(
+                        borderRadius: BorderRadius.circular(7),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(7),
+                          onTap: () {},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 1,
+                            height: MediaQuery.of(context).size.height * 0.19,
+                            decoration: BoxDecoration(
+                              gradient: primaryGradientOnly,
+                              borderRadius: BorderRadius.circular(7),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Stack(
+                              alignment: const AlignmentDirectional(-1, 1),
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 14, left: 20),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.22,
+                                        decoration: BoxDecoration(
+                                            color: Color(0xff81A2FF),
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "MAT-1003",
+                                              style: SafeGoogleFont(
+                                                'Poppins',
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400,
+                                                color: const Color(0xbbffffff),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Text(
+                                        "Applied \n"
+                                        "Statistics",
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Prof. Vemula Rama krishna',
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xffFFFFFF),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 17),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              "34%",
+                                              style: SafeGoogleFont(
+                                                'Poppins',
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            bottom: 10, top: 10),
+                                        width: 300,
+                                        height: 8,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10)),
+                                          child: LinearProgressIndicator(
+                                            value: 0.3,
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Color(0xffFD2929)),
+                                            // valueColor: AlwaysStoppedAnimation<Color>(Color(0xff11DA00)),
+                                            backgroundColor: Color(0xffFFFFFF),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: GradientText(
+                                    'MAT',
+                                    style: SafeGoogleFont(
+                                      'Poppins',
+                                      fontSize: 90,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffFFFFFF),
+                                    ),
+                                    gradient: LinearGradient(
+                                        end: Alignment.bottomCenter,
+                                        begin: Alignment.topCenter,
+                                        colors: [
+                                          Color(0x4dd3d3d3),
+                                          Color(0xffffff),
+                                        ]),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            const SizedBox(height: 5.0),
-                            Wrap(
-                              spacing: 5.0,
-                              children: ExerciseFilter.values
-                                  .map((ExerciseFilter exercise) {
-                                return FilterChip(
-                                  backgroundColor: Color(0xffDEDFE1),
-                                  label: Text(exercise.name),
-                                  selected: _filters.contains(exercise.name),
-                                  onSelected: (bool value) {
-                                    setState(() {
-                                      if (value) {
-                                        if (!_filters.contains(exercise.name)) {
-                                          _filters.add(exercise.name);
-                                        }
-                                      } else {
-                                        _filters.removeWhere((String name) {
-                                          return name == exercise.name;
-                                        });
-                                      }
-                                    });
-                                  },
-                                );
-                              }).toList(),
-                            ),
-                            addVerticalSpace(16),
-                            Material(
+                      ),
+                      addVerticalSpace(10),
+                      Material(
+                        borderRadius: BorderRadius.circular(7),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(7),
+                          onTap: () {},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 1,
+                            height: MediaQuery.of(context).size.height * 0.19,
+                            decoration: BoxDecoration(
+                              gradient: primaryGradientOnly,
                               borderRadius: BorderRadius.circular(7),
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(7),
-                                onTap: () {},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width * 1,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.19,
-                                  decoration: BoxDecoration(
-                                    gradient: primaryGradientOnly,
-                                    borderRadius: BorderRadius.circular(7),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Stack(
-                                    alignment:
-                                        const AlignmentDirectional(-1, 1),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Stack(
+                              alignment: const AlignmentDirectional(-1, 1),
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 14, left: 20),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 14, left: 20),
-                                        child: Column(
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.22,
+                                        decoration: BoxDecoration(
+                                            color: Color(0xff81A2FF),
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.max,
+                                              CrossAxisAlignment.center,
                                           children: [
-                                            Container(
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  0.02,
-                                              width: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.22,
-                                              decoration: BoxDecoration(
-                                                  color: Color(0xff81A2FF),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          50)),
-                                              child:  Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "MAT-1003",
-                                                    style: SafeGoogleFont(
-                                                      'Open Sans',
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: const Color(0xbbffffff),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
                                             Text(
-                                              "Applied \n"
-                                              "Statistics",
+                                              "CSE-1003",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                            Text(
-                                              'Prof. Vemula Rama krishna',
-                                              style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 10,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: Color(0xffFFFFFF),
+                                                color: const Color(0xbbffffff),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
-                                      Align(
-                                        alignment: AlignmentDirectional(1, 0),
-                                        child: GradientText(
-                                          'MAT',
-                                          style: SafeGoogleFont(
-                                            'Open Sans',
-                                            fontSize: 90,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffFFFFFF),
-                                          ),
-                                          gradient: LinearGradient(
-                                              end: Alignment.bottomCenter,
-                                              begin: Alignment.topCenter,
-                                              colors: [
-                                                Color(0x4dd3d3d3),
-                                                Color(0xffffff),
-                                              ]),
+                                      Text(
+                                        "Artificial \n"
+                                        "Intelligence",
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            addVerticalSpace(10),
-                            Material(
-                              borderRadius: BorderRadius.circular(7),
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(7),
-                                onTap: () {},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width * 1,
-                                  height:
-                                  MediaQuery.of(context).size.height * 0.19,
-                                  decoration: BoxDecoration(
-                                    gradient: primaryGradientOnly,
-                                    borderRadius: BorderRadius.circular(7),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Stack(
-                                    alignment:
-                                    const AlignmentDirectional(-1, 1),
-                                    children: [
+                                      Text(
+                                        'Prof. Barathi . S',
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xffFFFFFF),
+                                        ),
+                                      ),
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 14, left: 20),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.max,
+                                        padding:
+                                            const EdgeInsets.only(right: 17),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
                                           children: [
-                                            Container(
-                                              height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                                  0.02,
-                                              width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                                  0.22,
-                                              decoration: BoxDecoration(
-                                                  color: Color(0xff81A2FF),
-                                                  borderRadius:
-                                                  BorderRadius.circular(
-                                                      50)),
-                                              child:  Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "MAT-1003",
-                                                    style: SafeGoogleFont(
-                                                      'Open Sans',
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: const Color(0xbbffffff),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
                                             Text(
-                                              "Applied \n"
-                                                  "Statistics",
+                                              "90%",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 16,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.white,
                                               ),
-                                            ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            bottom: 10, top: 10),
+                                        width: 300,
+                                        height: 8,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10)),
+                                          child: LinearProgressIndicator(
+                                            value: 0.9,
+                                            // valueColor: AlwaysStoppedAnimation<Color>(Color(0xffFD2929)),
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Color(0xff11DA00)),
+                                            backgroundColor: Color(0xffFFFFFF),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: GradientText(
+                                    'CSE',
+                                    style: SafeGoogleFont(
+                                      'Poppins',
+                                      fontSize: 90,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffFFFFFF),
+                                    ),
+                                    gradient: LinearGradient(
+                                        end: Alignment.bottomCenter,
+                                        begin: Alignment.topCenter,
+                                        colors: [
+                                          Color(0x4dd3d3d3),
+                                          Color(0xffffff),
+                                        ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      addVerticalSpace(10),
+                      Material(
+                        borderRadius: BorderRadius.circular(7),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(7),
+                          onTap: () {},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 1,
+                            height: MediaQuery.of(context).size.height * 0.19,
+                            decoration: BoxDecoration(
+                              gradient: primaryGradientOnly,
+                              borderRadius: BorderRadius.circular(7),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Stack(
+                              alignment: const AlignmentDirectional(-1, 1),
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 14, left: 20),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.22,
+                                        decoration: BoxDecoration(
+                                            color: Color(0xff81A2FF),
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
                                             Text(
-                                              'Prof. Vemula Rama krishna',
+                                              "MAT-1003",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 10,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: Color(0xffFFFFFF),
+                                                color: const Color(0xbbffffff),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
-                                      Align(
-                                        alignment: AlignmentDirectional(1, 0),
-                                        child: GradientText(
-                                          'MAT',
-                                          style: SafeGoogleFont(
-                                            'Open Sans',
-                                            fontSize: 90,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffFFFFFF),
-                                          ),
-                                          gradient: LinearGradient(
-                                              end: Alignment.bottomCenter,
-                                              begin: Alignment.topCenter,
-                                              colors: [
-                                                Color(0x4dd3d3d3),
-                                                Color(0xffffff),
-                                              ]),
+                                      Text(
+                                        "Discrete \n"
+                                        "Mathematics",
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            addVerticalSpace(10),
-                            Material(
-                              borderRadius: BorderRadius.circular(7),
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(7),
-                                onTap: () {},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width * 1,
-                                  height:
-                                  MediaQuery.of(context).size.height * 0.19,
-                                  decoration: BoxDecoration(
-                                    gradient: primaryGradientOnly,
-                                    borderRadius: BorderRadius.circular(7),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Stack(
-                                    alignment:
-                                    const AlignmentDirectional(-1, 1),
-                                    children: [
+                                      Text(
+                                        'Prof. Ram Mohan . D',
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xffFFFFFF),
+                                        ),
+                                      ),
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 14, left: 20),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.max,
+                                        padding:
+                                            const EdgeInsets.only(right: 17),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
                                           children: [
-                                            Container(
-                                              height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                                  0.02,
-                                              width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                                  0.22,
-                                              decoration: BoxDecoration(
-                                                  color: Color(0xff81A2FF),
-                                                  borderRadius:
-                                                  BorderRadius.circular(
-                                                      50)),
-                                              child:  Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "MAT-1003",
-                                                    style: SafeGoogleFont(
-                                                      'Open Sans',
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: const Color(0xbbffffff),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
                                             Text(
-                                              "Applied \n"
-                                                  "Statistics",
+                                              "84%",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 16,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.white,
                                               ),
-                                            ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            bottom: 10, top: 10),
+                                        width: 300,
+                                        height: 8,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10)),
+                                          child: LinearProgressIndicator(
+                                            value: 0.8,
+                                            // valueColor: AlwaysStoppedAnimation<Color>(Color(0xffFD2929)),
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Color(0xff11DA00)),
+                                            backgroundColor: Color(0xffFFFFFF),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: GradientText(
+                                    'MAT',
+                                    style: SafeGoogleFont(
+                                      'Poppins',
+                                      fontSize: 90,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffFFFFFF),
+                                    ),
+                                    gradient: LinearGradient(
+                                        end: Alignment.bottomCenter,
+                                        begin: Alignment.topCenter,
+                                        colors: [
+                                          Color(0x4dd3d3d3),
+                                          Color(0xffffff),
+                                        ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      addVerticalSpace(10),
+                      Material(
+                        borderRadius: BorderRadius.circular(7),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(7),
+                          onTap: () {},
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 1,
+                            height: MediaQuery.of(context).size.height * 0.19,
+                            decoration: BoxDecoration(
+                              gradient: primaryGradientOnly,
+                              borderRadius: BorderRadius.circular(7),
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Stack(
+                              alignment: const AlignmentDirectional(-1, 1),
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 14, left: 20),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.22,
+                                        decoration: BoxDecoration(
+                                            color: Color(0xff81A2FF),
+                                            borderRadius:
+                                                BorderRadius.circular(50)),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
                                             Text(
-                                              'Prof. Vemula Rama krishna',
+                                              "MAT-1003",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 10,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: Color(0xffFFFFFF),
+                                                color: const Color(0xbbffffff),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
-                                      Align(
-                                        alignment: AlignmentDirectional(1, 0),
-                                        child: GradientText(
-                                          'MAT',
-                                          style: SafeGoogleFont(
-                                            'Open Sans',
-                                            fontSize: 90,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffFFFFFF),
-                                          ),
-                                          gradient: LinearGradient(
-                                              end: Alignment.bottomCenter,
-                                              begin: Alignment.topCenter,
-                                              colors: [
-                                                Color(0x4dd3d3d3),
-                                                Color(0xffffff),
-                                              ]),
+                                      Text(
+                                        "Database \n"
+                                        "Management",
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                            addVerticalSpace(10),
-                            Material(
-                              borderRadius: BorderRadius.circular(7),
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(7),
-                                onTap: () {},
-                                child: Container(
-                                  width: MediaQuery.of(context).size.width * 1,
-                                  height:
-                                  MediaQuery.of(context).size.height * 0.19,
-                                  decoration: BoxDecoration(
-                                    gradient: primaryGradientOnly,
-                                    borderRadius: BorderRadius.circular(7),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                  child: Stack(
-                                    alignment:
-                                    const AlignmentDirectional(-1, 1),
-                                    children: [
+                                      Text(
+                                        'Prof. Sudhakar Ilango',
+                                        style: SafeGoogleFont(
+                                          'Poppins',
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xffFFFFFF),
+                                        ),
+                                      ),
                                       Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 14, left: 20),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.max,
+                                        padding:
+                                            const EdgeInsets.only(right: 17),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
                                           children: [
-                                            Container(
-                                              height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                                  0.02,
-                                              width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                                  0.22,
-                                              decoration: BoxDecoration(
-                                                  color: Color(0xff81A2FF),
-                                                  borderRadius:
-                                                  BorderRadius.circular(
-                                                      50)),
-                                              child:  Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Text(
-                                                    "MAT-1003",
-                                                    style: SafeGoogleFont(
-                                                      'Open Sans',
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      color: const Color(0xbbffffff),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
                                             Text(
-                                              "Applied \n"
-                                                  "Statistics",
+                                              "14%",
                                               style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 16,
+                                                'Poppins',
+                                                fontSize: 12,
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.white,
                                               ),
-                                            ),
-                                            Text(
-                                              'Prof. Vemula Rama krishna',
-                                              style: SafeGoogleFont(
-                                                'Open Sans',
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w400,
-                                                color: Color(0xffFFFFFF),
-                                              ),
-                                            ),
+                                            )
                                           ],
                                         ),
                                       ),
-                                      Align(
-                                        alignment: AlignmentDirectional(1, 0),
-                                        child: GradientText(
-                                          'MAT',
-                                          style: SafeGoogleFont(
-                                            'Open Sans',
-                                            fontSize: 90,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffFFFFFF),
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            bottom: 10, top: 10),
+                                        width: 300,
+                                        height: 8,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10)),
+                                          child: LinearProgressIndicator(
+                                            value: 0.04,
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                                    Color(0xffFD2929)),
+                                            // valueColor: AlwaysStoppedAnimation<Color>(Color(0xff11DA00)),
+                                            backgroundColor: Color(0xffFFFFFF),
                                           ),
-                                          gradient: LinearGradient(
-                                              end: Alignment.bottomCenter,
-                                              begin: Alignment.topCenter,
-                                              colors: [
-                                                Color(0x4dd3d3d3),
-                                                Color(0xffffff),
-                                              ]),
                                         ),
-                                      ),
+                                      )
                                     ],
                                   ),
                                 ),
-                              ),
+                                Align(
+                                  alignment: AlignmentDirectional(1, 0),
+                                  child: GradientText(
+                                    'MAT',
+                                    style: SafeGoogleFont(
+                                      'Poppins',
+                                      fontSize: 90,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffFFFFFF),
+                                    ),
+                                    gradient: LinearGradient(
+                                        end: Alignment.bottomCenter,
+                                        begin: Alignment.topCenter,
+                                        colors: [
+                                          Color(0x4dd3d3d3),
+                                          Color(0xffffff),
+                                        ]),
+                                  ),
+                                ),
+                              ],
                             ),
-                            addVerticalSpace(10),
-                          ],
-                        )
-                      ],
-                    )),
-              ],
-            )
-          ])),
+                          ),
+                        ),
+                      ),
+                      addVerticalSpace(10),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          const SizedBox(height: 5.0),
+                        ],
+                      )
+                    ],
+                  )),
+            ],
+          ))
         ],
       ),
     );

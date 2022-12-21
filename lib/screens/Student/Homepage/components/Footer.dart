@@ -23,7 +23,7 @@ class footerBuild extends StatelessWidget {
           children: [
             Text("Whoop\nIt up!",
               style: SafeGoogleFont(
-                'Open Sans',
+                'Poppins',
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: const Color(0xffAEAEAE),
@@ -31,7 +31,7 @@ class footerBuild extends StatelessWidget {
             ),
             Text("Crafted with love ❤  by\nStudents for Students ️",
               style: SafeGoogleFont(
-                'Open Sans',
+                'Poppins',
                 fontSize: 14,
                 fontWeight: FontWeight.w200,
                 color: const Color(0xffA0B1B8),

@@ -63,7 +63,7 @@ class _bannerBuildState extends State<bannerBuild> {
                 Text(
                   "Enjoying the application?",
                   style: SafeGoogleFont(
-                    'Open Sans',
+                    'Poppins',
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
@@ -72,7 +72,7 @@ class _bannerBuildState extends State<bannerBuild> {
                 Text(
                   "Make sure to Rate us!",
                   style: SafeGoogleFont(
-                    'Open Sans',
+                    'Poppins',
                     fontSize: 11,
                     fontWeight: FontWeight.w400,
                     color: Color(0x8cffffff),
