@@ -1,10 +1,12 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:myapp/screens/Student/Homepage/Homepage.dart';
 import 'package:myapp/screens/Student/MyProfilePage/Profilepage.dart';
 
 import '../../customs/theme.dart';
+import 'Homepage/components/Drawer.dart';
 import 'TimetablePage/Timetablepage.dart';
 
 class Layout extends StatefulWidget {
@@ -15,10 +17,9 @@ class Layout extends StatefulWidget {
 }
 
 class _LayoutState extends State<Layout> {
-  late PageController _pageController;
   int _selectedPage = 0;
 
-  List<Widget> pages = [
+  final List<Widget> pages = [
     const HomePage(),
     const HomePage(),
     const TimetablePage(),
@@ -29,31 +30,25 @@ class _LayoutState extends State<Layout> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedPage = index;
-      _pageController.jumpToPage(index);
     });
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    _pageController = PageController(initialPage: 0);
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-    super.initState();
+  void _openEndDrawer() {
+    _scaffoldKey.currentState!.openEndDrawer();
+  }
+
+  void _closeEndDrawer() {
+    Navigator.of(context).pop();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: SideMenu(),
       extendBody: false,
-      body: PageView(
-        padEnds: false,
-        allowImplicitScrolling: true,
-        onPageChanged: (index) => setState(() {
-          _selectedPage = index;
-        }),
-        controller: _pageController,
-        children: [...pages],
-      ),
+      body: pages[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(
           elevation: 19,
           // backgroundColor: Color(0xffEFF3FE),
@@ -71,7 +66,7 @@ class _LayoutState extends State<Layout> {
           iconSize: 25,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
-          onTap: (index) => _onItemTapped(index),
+          onTap: _onItemTapped,
           items: _navBarsItems()),
     );
   }

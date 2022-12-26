@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:myapp/screens/Student/Homepage/components/Drawer.dart';
 import 'package:myapp/screens/Student/Homepage/components/FeatureCards.dart';
 import 'package:myapp/screens/Student/Homepage/components/Footer.dart';
 import 'package:myapp/screens/Student/Homepage/components/MyButton.dart';
@@ -49,10 +48,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _HomepageScaffoldKey = new GlobalKey<ScaffoldState>();
     return Scaffold(
-      endDrawer: SideMenu(),
-
       backgroundColor: scaffoldBackground,
       body: CustomScrollView(
         controller: _scrollController,
@@ -139,31 +135,36 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                             ),
                             child: Column(
                               children: [
-                                Material(
-                                  elevation: 19,
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.white,
-                                  child: InkWell(
-                                    borderRadius: BorderRadius.circular(50),
-                                    onTap: ()  => Scaffold.of(context).openDrawer(),
-                                    child: Container(
-                                      width: 55,
-                                      height: 55,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0x59c4c4c4),
-                                        border: Border.all(
-                                          color: Color(0xffefefef),
-                                          width:
-                                              0.8, //                   <--- border width here
+                                Builder(
+                                  builder: (context) {
+                                    return Material(
+                                      elevation: 19,
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: Colors.white,
+                                      child: InkWell(
+                                        borderRadius: BorderRadius.circular(50),
+                                        onTap: () {},
+                                        child: Container(
+                                          width: 55,
+                                          height: 55,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0x59c4c4c4),
+                                            border: Border.all(
+                                              color: Color(0xffefefef),
+                                              width:
+                                                  0.8, //                   <--- border width here
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                          ),
+                                          child: const Icon(
+                                              Icons.person_outline_outlined,
+                                              color: Color(0xff212121)),
                                         ),
-                                        borderRadius: BorderRadius.circular(25),
                                       ),
-                                      child: const Icon(
-                                          Icons.person_outline_outlined,
-                                          color: Color(0xff212121)),
-                                    ),
-                                  ),
-                                ),
+                                    );
+                                  },
+                                )
                               ],
                             ),
                           )
@@ -256,7 +257,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   addVerticalSpace(20),
                   MyButtonsView(),
                   addVerticalSpace(20),
-
                   upcomingEventsBuild(),
                   addVerticalSpace(20),
                   FeatureCardsWidget(),
@@ -264,7 +264,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   addVerticalSpace(20),
                   myFacultyBuild(),
                   addVerticalSpace(20),
-
                   Padding(
                     padding: const EdgeInsets.only(
                         top: 0, left: 17, right: 17, bottom: 20),
@@ -359,7 +358,4 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
     );
   }
-
 }
-
-
