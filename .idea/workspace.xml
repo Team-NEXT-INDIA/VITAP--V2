@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
+      <change afterPath="$PROJECT_DIR$/assets/images/logo_width.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/DetailPages/educationBuild.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/DetailPages/mentorBuild.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/DetailPages/personalBuild.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/DigitalCard.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/textBox.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/ProfileDetailsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/ProfileDetailsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +58,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">

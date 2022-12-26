@@ -1,10 +1,12 @@
 import 'dart:ui';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/customs/theme.dart';
 import 'package:myapp/utils/widget_functions.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 import '../../../../utils/utils.dart';
 import '../PromoView.dart';
 
@@ -23,16 +25,14 @@ class _PromoSliderState extends State<PromoSlider> {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(children: <Widget>[
       CarouselSlider(
         carouselController: _PromoCarouselController,
         items: [
-
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider2',
@@ -53,13 +53,13 @@ class _PromoSliderState extends State<PromoSlider> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(18),
-                          child:
-                          Ink(
+                          child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
                               borderRadius: BorderRadius.circular(17),
                               image: DecorationImage(
-                                image: AssetImage('assets/images/home/slider-2.png'),
+                                image: AssetImage(
+                                    'assets/images/home/slider-2.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -107,14 +107,15 @@ class _PromoSliderState extends State<PromoSlider> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional
-                                          .fromSTEB(8, 8, 8, 8),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              8, 8, 8, 8),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             '2nd - Annual Convocation',
@@ -127,13 +128,12 @@ class _PromoSliderState extends State<PromoSlider> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                            const EdgeInsetsDirectional
+                                            padding: const EdgeInsetsDirectional
                                                 .fromSTEB(0, 0, 16, 0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                              MainAxisAlignment.start,
+                                                  MainAxisAlignment.start,
                                               children: [
                                                 Expanded(
                                                   child: Text(
@@ -145,7 +145,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                                           0xFFEAEAEA),
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w300,
+                                                          FontWeight.w300,
                                                     ),
                                                   ),
                                                 ),
@@ -171,12 +171,11 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider3',
                 child: Container(
-
                   margin: const EdgeInsets.all(6),
                   // height: 550,
                   width: MediaQuery.of(context).size.width * 0.7,
@@ -193,13 +192,13 @@ class _PromoSliderState extends State<PromoSlider> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(18),
-                          child:
-                          Ink(
+                          child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
                               borderRadius: BorderRadius.circular(17),
                               image: DecorationImage(
-                                image: AssetImage('assets/images/home/slider-3.png'),
+                                image: AssetImage(
+                                    'assets/images/home/slider-3.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -247,14 +246,15 @@ class _PromoSliderState extends State<PromoSlider> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional
-                                          .fromSTEB(8, 8, 8, 8),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              8, 8, 8, 8),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Best Campus - VITAP',
@@ -267,13 +267,12 @@ class _PromoSliderState extends State<PromoSlider> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                            const EdgeInsetsDirectional
+                                            padding: const EdgeInsetsDirectional
                                                 .fromSTEB(0, 0, 16, 0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                              MainAxisAlignment.start,
+                                                  MainAxisAlignment.start,
                                               children: [
                                                 Expanded(
                                                   child: Text(
@@ -285,7 +284,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                                           0xFFEAEAEA),
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w300,
+                                                          FontWeight.w300,
                                                     ),
                                                   ),
                                                 ),
@@ -308,11 +307,10 @@ class _PromoSliderState extends State<PromoSlider> {
               ),
             ),
           ),
-
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider1',
@@ -343,13 +341,13 @@ class _PromoSliderState extends State<PromoSlider> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(18),
-                          child:
-                          Ink(
+                          child: Ink(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(17),
                               boxShadow: CarouselShadow,
                               image: DecorationImage(
-                                image: AssetImage('assets/images/home/gif-1.gif'),
+                                image:
+                                    AssetImage('assets/images/home/gif-1.gif'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -397,14 +395,15 @@ class _PromoSliderState extends State<PromoSlider> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional
-                                          .fromSTEB(8, 8, 8, 8),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              8, 8, 8, 8),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Campus View',
@@ -417,13 +416,12 @@ class _PromoSliderState extends State<PromoSlider> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                            const EdgeInsetsDirectional
+                                            padding: const EdgeInsetsDirectional
                                                 .fromSTEB(0, 0, 16, 0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                              MainAxisAlignment.start,
+                                                  MainAxisAlignment.start,
                                               children: [
                                                 Expanded(
                                                   child: Text(
@@ -435,7 +433,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                                           0xFFEAEAEA),
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w300,
+                                                          FontWeight.w300,
                                                     ),
                                                   ),
                                                 ),
@@ -461,7 +459,7 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider4',
@@ -492,13 +490,13 @@ class _PromoSliderState extends State<PromoSlider> {
                       children: [
                         ClipRRect(
                           borderRadius: BorderRadius.circular(18),
-                          child:
-                          Ink(
+                          child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
                               borderRadius: BorderRadius.circular(17),
                               image: DecorationImage(
-                                image: AssetImage('assets/images/home/slider.png'),
+                                image:
+                                    AssetImage('assets/images/home/slider.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -546,14 +544,15 @@ class _PromoSliderState extends State<PromoSlider> {
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional
-                                          .fromSTEB(8, 8, 8, 8),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              8, 8, 8, 8),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                            MainAxisAlignment.center,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Campus View',
@@ -566,13 +565,12 @@ class _PromoSliderState extends State<PromoSlider> {
                                             ),
                                           ),
                                           Padding(
-                                            padding:
-                                            const EdgeInsetsDirectional
+                                            padding: const EdgeInsetsDirectional
                                                 .fromSTEB(0, 0, 16, 0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
-                                              MainAxisAlignment.start,
+                                                  MainAxisAlignment.start,
                                               children: [
                                                 Expanded(
                                                   child: Text(
@@ -584,7 +582,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                                           0xFFEAEAEA),
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w300,
+                                                          FontWeight.w300,
                                                     ),
                                                   ),
                                                 ),
@@ -625,27 +623,23 @@ class _PromoSliderState extends State<PromoSlider> {
             initialPage: 0,
             enlargeStrategy: CenterPageEnlargeStrategy.zoom),
       ),
-
       AnimatedSmoothIndicator(
         activeIndex: _current,
-        count:  4,
-        effect:  WormEffect(
-           offset : 3.0,
-           dotWidth : 30.0,
-           dotHeight : 2.0,
-           spacing : 5.0,
-           radius : 10,
-          dotColor : Color(0x868a8a8a),
-           strokeWidth : 1,
-           paintStyle : PaintingStyle.fill,
-           type : WormType.normal,
+        count: 4,
+        effect: WormEffect(
+          offset: 3.0,
+          dotWidth: 30.0,
+          dotHeight: 2.0,
+          spacing: 5.0,
+          radius: 10,
+          dotColor: Color(0x868a8a8a),
+          strokeWidth: 1,
+          paintStyle: PaintingStyle.fill,
+          type: WormType.normal,
           activeDotColor: secondaryBlue,
-
         ),
       ),
       addVerticalSpace(20),
-    ]
-
-    );
+    ]);
   }
 }

@@ -44,6 +44,8 @@ dependencies:
   flutter_svg: ^1.1.6
   line_icons: ^2.0.1
   font_awesome_flutter: ^10.3.0
+  barcode_widget: ^2.0.3
+  flip_card: ^0.6.0
 
 
 dev_dependencies:
