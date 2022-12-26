@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added basic loginpage.dart">
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/ProfileDetailsPage.dart" afterDir="false" />
+    <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/ProfileDetailsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/ProfileDetailsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670587937486</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Profile details page structure">
+      <created>1672033950665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672033950665</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added basic loginpage.dart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic loginpage.dart" />
+    <MESSAGE value="Added Profile details page structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Profile details page structure" />
   </component>
 </project>
