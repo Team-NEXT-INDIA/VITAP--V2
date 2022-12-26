@@ -29,6 +29,7 @@ class _PromoViewState extends State<PromoView> {
           elevation: 0,
           // snap: true,
           floating: true,
+          snap: false,
           pinned: true,
           stretch: true,
           leading: FadeInDown(

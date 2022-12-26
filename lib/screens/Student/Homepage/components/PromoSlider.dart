@@ -37,16 +37,6 @@ class _PromoSliderState extends State<PromoSlider> {
                 transitionOnUserGestures: true,
                 tag: 'mainslider2',
                 child: Container(
-                  // decoration: BoxDecoration(
-                  //   boxShadow: const [
-                  //     BoxShadow(
-                  //       offset: Offset(2, 22),
-                  //       spreadRadius: -5,
-                  //       blurRadius: 47,
-                  //       color: Color.fromRGBO(81, 81, 81, 0.29),
-                  //     ),
-                  //   ],
-                  // ),
                   margin: const EdgeInsets.all(6),
                   // height: 550,
                   width: MediaQuery.of(context).size.width * 0.7,
@@ -186,16 +176,7 @@ class _PromoSliderState extends State<PromoSlider> {
                 transitionOnUserGestures: true,
                 tag: 'mainslider3',
                 child: Container(
-                  // decoration: BoxDecoration(
-                  //   boxShadow: const [
-                  //     BoxShadow(
-                  //       offset: Offset(2, 22),
-                  //       spreadRadius: -5,
-                  //       blurRadius: 47,
-                  //       color: Color.fromRGBO(81, 81, 81, 0.29),
-                  //     ),
-                  //   ],
-                  // ),
+
                   margin: const EdgeInsets.all(6),
                   // height: 550,
                   width: MediaQuery.of(context).size.width * 0.7,

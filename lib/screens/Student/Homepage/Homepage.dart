@@ -1,9 +1,8 @@
 import 'dart:ui';
-import 'package:animated_text_kit/animated_text_kit.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:marquee/marquee.dart';
 import 'package:myapp/screens/Student/Homepage/components/Drawer.dart';
 import 'package:myapp/screens/Student/Homepage/components/FeatureCards.dart';
 import 'package:myapp/screens/Student/Homepage/components/Footer.dart';
@@ -13,11 +12,8 @@ import 'package:myapp/screens/Student/Homepage/components/PromoSlider.dart';
 import 'package:myapp/screens/Student/Homepage/components/UpcomingEvents.dart';
 import 'package:myapp/utils/utils.dart';
 
-import '../../../customs/animation.dart';
 import '../../../customs/theme.dart';
 import '../../../utils/widget_functions.dart';
-import '../Layout.dart';
-import 'PromoView.dart';
 import 'components/CustomButtons.dart';
 
 class HomePage extends StatefulWidget {
@@ -56,70 +52,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     final GlobalKey<ScaffoldState> _HomepageScaffoldKey = new GlobalKey<ScaffoldState>();
     return Scaffold(
       endDrawer: SideMenu(),
-      // endDrawer: Drawer(
-      //   child: ListView(
-      //     padding: EdgeInsets.zero,
-      //     children: [
-      //       const UserAccountsDrawerHeader(
-      //         currentAccountPicture: CircleAvatar(
-      //           backgroundImage: NetworkImage(
-      //               'https://images.unsplash.com/photo-1485290334039-a3c69043e517?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyOTU3NDE0MQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300'),
-      //         ),
-      //         accountEmail: Text('jane.doe@example.com'),
-      //         accountName: Text(
-      //           'Jane Doe',
-      //           style: TextStyle(fontSize: 24.0),
-      //         ),
-      //         decoration: BoxDecoration(
-      //           color: Colors.black87,
-      //         ),
-      //         // child: Text('Drawer Header'),
-      //       ),
-      //       ListTile(
-      //         leading: const Icon(Icons.house),
-      //         title: const Text(
-      //           'Houses',
-      //           style: TextStyle(fontSize: 24.0),
-      //         ),
-      //         onTap: () {
-      //         },
-      //       ),
-      //       ListTile(
-      //         leading: const Icon(Icons.apartment),
-      //         title: const Text(
-      //           'Apartments',
-      //           style: TextStyle(fontSize: 24.0),
-      //         ),
-      //         onTap: () {
-      //         },
-      //       ),
-      //       ListTile(
-      //         leading: const Icon(Icons.house_outlined),
-      //         title: const Text(
-      //           'Townhomes',
-      //           style: TextStyle(fontSize: 24.0),
-      //         ),
-      //         onTap: () {
-      //         },
-      //       ),
-      //       const Divider(
-      //         height: 10,
-      //         thickness: 1,
-      //       ),
-      //       ListTile(
-      //         leading: const Icon(Icons.favorite),
-      //         title: const Text(
-      //           'Favorites',
-      //           style: TextStyle(fontSize: 24.0),
-      //         ),
-      //         onTap: () {
-      //
-      //         },
-      //       ),
-      //     ],
-      //   ),
-      // ),
-      endDrawerEnableOpenDragGesture: true,
 
       backgroundColor: scaffoldBackground,
       body: CustomScrollView(
@@ -320,29 +252,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  // Container(
-                  //
-                  //   padding: EdgeInsets.only(left: 10),
-                  //   width: MediaQuery.of(context).size.width * 0.97,
-                  //   height: MediaQuery.of(context).size.height * 0.03,
-                  //   decoration: BoxDecoration(
-                  //     color: Color(0xCCADF5FF)
-                  //   ),
-                  //   child: Marquee(
-                  //     text: 'VITAP App for Amaravati University students, and get all your academic needs in one place. It\'s designed to make your day-to-day life simple and easy, with features for class notifications, attendance, grades & more.',
-                  //     style: TextStyle(fontWeight: FontWeight.bold),
-                  //     scrollAxis: Axis.horizontal,
-                  //     crossAxisAlignment: CrossAxisAlignment.start,
-                  //     blankSpace: 20.0,
-                  //     velocity: 20.0,
-                  //     pauseAfterRound: Duration(seconds: 1),
-                  //     startPadding: 10.0,
-                  //     accelerationDuration: Duration(seconds: 1),
-                  //     accelerationCurve: Curves.linear,
-                  //     decelerationDuration: Duration(milliseconds: 500),
-                  //     decelerationCurve: Curves.easeOut,
-                  //   ),
-                  // ),
                   PromoSlider(),
                   addVerticalSpace(20),
                   MyButtonsView(),
@@ -352,7 +261,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   addVerticalSpace(20),
                   FeatureCardsWidget(),
                   addVerticalSpace(20),
-
+                  addVerticalSpace(20),
                   myFacultyBuild(),
                   addVerticalSpace(20),
 

@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:myapp/screens/Student/Homepage/Homepage.dart';
+import 'package:myapp/screens/Student/MyProfilePage/Profilepage.dart';
 
 import '../../customs/theme.dart';
 import 'TimetablePage/Timetablepage.dart';
@@ -22,7 +23,7 @@ class _LayoutState extends State<Layout> {
     const HomePage(),
     const TimetablePage(),
     const HomePage(),
-    const TimetablePage(),
+    const profilePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -53,28 +54,25 @@ class _LayoutState extends State<Layout> {
         controller: _pageController,
         children: [...pages],
       ),
-      bottomNavigationBar: Container(
-        height: 72,
-        child: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
           elevation: 19,
           // backgroundColor: Color(0xffEFF3FE),
-            showSelectedLabels: true,
-            enableFeedback: true,
-            currentIndex: _selectedPage,
-            selectedLabelStyle: TextStyle(
-              fontWeight: FontWeight.w600,
-              color: primaryColor,
-            ),
-            selectedItemColor: primaryColor,
-            unselectedItemColor: Color(0xff838aa6),
-            selectedFontSize: 10,
-            unselectedFontSize: 10,
-            iconSize: 25,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            onTap: (index) => _onItemTapped(index),
-            items: _navBarsItems()),
-      ),
+          showSelectedLabels: true,
+          enableFeedback: true,
+          currentIndex: _selectedPage,
+          selectedLabelStyle: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: primaryColor,
+          ),
+          selectedItemColor: primaryColor,
+          unselectedItemColor: Color(0xff838aa6),
+          selectedFontSize: 10,
+          unselectedFontSize: 10,
+          iconSize: 25,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          onTap: (index) => _onItemTapped(index),
+          items: _navBarsItems()),
     );
   }
 
@@ -97,8 +95,8 @@ class _LayoutState extends State<Layout> {
         label: 'Calender',
       ),
       const BottomNavigationBarItem(
-        icon: Icon(Icons.apps),
-        label: 'More',
+        icon: Icon(Icons.person),
+        label: 'You',
       ),
     ];
   }

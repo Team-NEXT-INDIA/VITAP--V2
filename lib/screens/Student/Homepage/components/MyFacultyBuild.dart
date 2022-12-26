@@ -59,7 +59,7 @@ class myFacultyBuild extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 20),
+          padding: EdgeInsets.only(left: 10),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -75,7 +75,7 @@ class myFacultyBuild extends StatelessWidget {
                       onTap: (){},
                       borderRadius: BorderRadius.circular(17),
                       child: Container(
-                        padding: EdgeInsets.all(3),
+                        padding: EdgeInsets.all(1),
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
@@ -87,7 +87,7 @@ class myFacultyBuild extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2.0, top: 10),
+                              padding: const EdgeInsets.only(left:2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -167,7 +167,7 @@ class myFacultyBuild extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2.0, top: 10),
+                              padding: const EdgeInsets.only(left:2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -247,7 +247,7 @@ class myFacultyBuild extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2.0, top: 10),
+                              padding: const EdgeInsets.only(left:2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -327,7 +327,7 @@ class myFacultyBuild extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2.0, top: 10),
+                              padding: const EdgeInsets.only(left:2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,

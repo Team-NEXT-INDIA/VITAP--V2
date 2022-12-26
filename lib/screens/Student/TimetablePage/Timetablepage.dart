@@ -48,7 +48,7 @@ class _TimetablePageState extends State<TimetablePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  padding: EdgeInsets.only(left: 20, right: 20),
+                  padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -66,7 +66,7 @@ class _TimetablePageState extends State<TimetablePage> {
                         children: ExerciseFilter.values
                             .map((ExerciseFilter exercise) {
                           return FilterChip(
-                            backgroundColor: Color(0xffDEDFE1),
+                            backgroundColor: const Color(0xffDEDFE1),
                             label: Text(exercise.name),
                             selected: _filters.contains(exercise.name),
                             onSelected: (bool value) {
@@ -118,7 +118,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                             MediaQuery.of(context).size.width *
                                                 0.22,
                                         decoration: BoxDecoration(
-                                            color: Color(0xff81A2FF),
+                                            color: const Color(0xff81A2FF),
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
@@ -155,7 +155,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                           'Poppins',
                                           fontSize: 10,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xffFFFFFF),
+                                          color: const Color(0xffFFFFFF),
                                         ),
                                       ),
                                       Padding(
@@ -178,11 +178,11 @@ class _TimetablePageState extends State<TimetablePage> {
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(
+                                        margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: 300,
-                                        height: 8,
-                                        child: ClipRRect(
+                                        width: MediaQuery.of(context).size.width * 0.8,
+                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
                                           child: LinearProgressIndicator(
@@ -199,16 +199,16 @@ class _TimetablePageState extends State<TimetablePage> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1, 0),
+                                  alignment: const AlignmentDirectional(1, 0),
                                   child: GradientText(
                                     'MAT',
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 90,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xffFFFFFF),
+                                      color: const Color(0xffFFFFFF),
                                     ),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                         end: Alignment.bottomCenter,
                                         begin: Alignment.topCenter,
                                         colors: [
@@ -255,7 +255,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                             MediaQuery.of(context).size.width *
                                                 0.22,
                                         decoration: BoxDecoration(
-                                            color: Color(0xff81A2FF),
+                                            color: const Color(0xff81A2FF),
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
@@ -292,7 +292,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                           'Poppins',
                                           fontSize: 10,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xffFFFFFF),
+                                          color: const Color(0xffFFFFFF),
                                         ),
                                       ),
                                       Padding(
@@ -315,11 +315,11 @@ class _TimetablePageState extends State<TimetablePage> {
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(
+                                        margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: 300,
-                                        height: 8,
-                                        child: ClipRRect(
+                                        width: MediaQuery.of(context).size.width * 0.8,
+                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
                                           child: LinearProgressIndicator(
@@ -336,16 +336,16 @@ class _TimetablePageState extends State<TimetablePage> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1, 0),
+                                  alignment: const AlignmentDirectional(1, 0),
                                   child: GradientText(
                                     'CSE',
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 90,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xffFFFFFF),
+                                      color: const Color(0xffFFFFFF),
                                     ),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                         end: Alignment.bottomCenter,
                                         begin: Alignment.topCenter,
                                         colors: [
@@ -392,7 +392,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                             MediaQuery.of(context).size.width *
                                                 0.22,
                                         decoration: BoxDecoration(
-                                            color: Color(0xff81A2FF),
+                                            color: const Color(0xff81A2FF),
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
@@ -429,7 +429,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                           'Poppins',
                                           fontSize: 10,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xffFFFFFF),
+                                          color: const Color(0xffFFFFFF),
                                         ),
                                       ),
                                       Padding(
@@ -452,11 +452,11 @@ class _TimetablePageState extends State<TimetablePage> {
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(
+                                        margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: 300,
-                                        height: 8,
-                                        child: ClipRRect(
+                                        width: MediaQuery.of(context).size.width * 0.8,
+                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
                                           child: LinearProgressIndicator(
@@ -473,16 +473,16 @@ class _TimetablePageState extends State<TimetablePage> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1, 0),
+                                  alignment: const AlignmentDirectional(1, 0),
                                   child: GradientText(
                                     'MAT',
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 90,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xffFFFFFF),
+                                      color: const Color(0xffFFFFFF),
                                     ),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                         end: Alignment.bottomCenter,
                                         begin: Alignment.topCenter,
                                         colors: [
@@ -529,7 +529,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                             MediaQuery.of(context).size.width *
                                                 0.22,
                                         decoration: BoxDecoration(
-                                            color: Color(0xff81A2FF),
+                                            color: const Color(0xff81A2FF),
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
@@ -566,7 +566,7 @@ class _TimetablePageState extends State<TimetablePage> {
                                           'Poppins',
                                           fontSize: 10,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xffFFFFFF),
+                                          color: const Color(0xffFFFFFF),
                                         ),
                                       ),
                                       Padding(
@@ -589,11 +589,11 @@ class _TimetablePageState extends State<TimetablePage> {
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(
+                                        margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: 300,
-                                        height: 8,
-                                        child: ClipRRect(
+                                        width: MediaQuery.of(context).size.width * 0.8,
+                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
                                           child: LinearProgressIndicator(
@@ -610,16 +610,16 @@ class _TimetablePageState extends State<TimetablePage> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1, 0),
+                                  alignment: const AlignmentDirectional(1, 0),
                                   child: GradientText(
                                     'MAT',
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 90,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xffFFFFFF),
+                                      color: const Color(0xffFFFFFF),
                                     ),
-                                    gradient: LinearGradient(
+                                    gradient: const LinearGradient(
                                         end: Alignment.bottomCenter,
                                         begin: Alignment.topCenter,
                                         colors: [
@@ -637,8 +637,8 @@ class _TimetablePageState extends State<TimetablePage> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          const SizedBox(height: 5.0),
+                        children: const <Widget>[
+                          SizedBox(height: 5.0),
                         ],
                       )
                     ],
