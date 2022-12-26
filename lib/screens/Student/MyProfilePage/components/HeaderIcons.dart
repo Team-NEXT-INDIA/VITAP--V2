@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:myapp/screens/Student/MyProfilePage/ProfileDetailsPage.dart';
 import 'package:myapp/screens/Student/MyProfilePage/components/HIconswidget.dart';
 
 import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
+import '../../../LoginPage/loginpage.dart';
 
 class headerIcons extends StatelessWidget {
   const headerIcons({Key? key}) : super(key: key);
@@ -28,7 +30,13 @@ class headerIcons extends StatelessWidget {
               hIconsWidget(
                   title: "PROFILE",
                   icon: FontAwesomeIcons.user,
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileDetailsPage()),
+                    );
+                  },
               ),
 
               hIconsWidget(
