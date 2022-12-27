@@ -28,3 +28,4 @@ doc/api/
 .flutter-plugins-dependencies
 .idea/workspace.xml
 .idea/workspace.xml
+*.xml
