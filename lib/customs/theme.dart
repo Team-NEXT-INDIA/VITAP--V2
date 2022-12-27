@@ -3,31 +3,29 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-Color primaryColor = const Color(0xFF0064FF);
+Color primaryColor = const Color(0xFF103cc9);
 Color scaffoldBackground2 = const Color(0xffF9F9F9);
 Color scaffoldBackground = const Color(0xffffffff);
 
 Color iconPrimary = const Color(0xff212121);
 Color footerBackground = const Color(0xFFF0F0F0);
 Color titlePrimary = const Color(0xff232323);
-Color secondaryBlue = const Color(0xFF002C64);
+Color secondaryBlue = const Color(0xFF0a2885);
+Color homeHeadericonbg = const Color(0xFFe7ebf8);
+Color homeHeadericonfg = const Color(0xFF103cc9);
+Color ogColor = const Color(0xff174EE4);
 //Box Shadow For Blue Primary
 
+const iconColor30 = Color(0xffe7ebf8);
+var buttonBackground = Color(0xFF103cc9);
 
 var profileGradient = BoxDecoration(
     image: DecorationImage(
       image: AssetImage("assets/images/home/bg_overlay.png"),
       fit: BoxFit.cover,
     ),
-  // color: primaryColor,
-    gradient: LinearGradient(
-        colors: [
-          Color(0xff0064FF),
-          Color(0xff0D4FB6)
-        ]
-    )
-);
-
+    // color: primaryColor,
+    gradient: LinearGradient(colors: [Color(0xff103cc9), Color(0xff103cc9)]));
 
 var primaryBoxShadow = BoxShadow(
   offset: Offset(10, 14),
@@ -57,7 +55,6 @@ var containerDecoration = BoxDecoration(
   borderRadius: BorderRadius.circular(16),
 );
 
-
 const CarouselShadow = const [
   BoxShadow(
     offset: Offset(5, 22),
@@ -67,21 +64,10 @@ const CarouselShadow = const [
   )
 ];
 
-
-
 var CarouselGradient = LinearGradient(
     begin: Alignment.bottomRight,
-    stops: [
-      0.3,
-      0.9
-    ],
-    colors: [
-      Colors.black.withOpacity(.8),
-      Colors.black.withOpacity(.2)
-    ]);
-
-
-
+    stops: [0.3, 0.9],
+    colors: [Colors.black.withOpacity(.8), Colors.black.withOpacity(1)]);
 
 var primaryGradient = BoxDecoration(
   gradient: LinearGradient(

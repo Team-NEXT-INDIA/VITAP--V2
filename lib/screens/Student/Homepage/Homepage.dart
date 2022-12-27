@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 // StretchMode.fadeTitle
               ],
               background: Container(
-                color: scaffoldBackground,
+                color: Colors.white,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               children: [
                                 Material(
                                   borderRadius: BorderRadius.circular(50),
-                                  color: Colors.white,
+                                  color: homeHeadericonbg,
                                   elevation: 0,
                                   child: InkWell(
                                     borderRadius: BorderRadius.circular(50),
@@ -119,9 +119,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         ),
                                         borderRadius: BorderRadius.circular(25),
                                       ),
-                                      child: const Icon(
-                                          Icons.notifications_none_sharp,
-                                          color: Color(0xff212121)),
+                                      child: Icon(
+                                        Icons.notifications_none_sharp,
+                                        color: homeHeadericonfg,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -140,7 +141,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                     return Material(
                                       elevation: 19,
                                       borderRadius: BorderRadius.circular(50),
-                                      color: Colors.white,
+                                      color: homeHeadericonbg,
                                       child: InkWell(
                                         borderRadius: BorderRadius.circular(50),
                                         onTap: () {},
@@ -157,9 +158,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                             borderRadius:
                                                 BorderRadius.circular(25),
                                           ),
-                                          child: const Icon(
-                                              Icons.person_outline_outlined,
-                                              color: Color(0xff212121)),
+                                          child: Icon(
+                                            Icons.person_outline_outlined,
+                                            color: homeHeadericonfg,
+                                          ),
                                         ),
                                       ),
                                     );

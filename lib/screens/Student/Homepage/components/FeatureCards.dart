@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/customs/theme.dart';
 
-import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
 
 class FeatureCardsWidget extends StatefulWidget {
@@ -18,6 +18,9 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var colorCard1 = secondaryBlue;
+    var colorCard2 = Color(0xff0078ac);
+    var colorCard3 = Color(0xff00b259);
     return Column(children: <Widget>[
       Padding(
         padding: const EdgeInsets.only(left: 15.0, right: 15.0, bottom: 15),
@@ -35,7 +38,6 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                     color: const Color(0xff43434E),
                   ),
                 ),
-
               ],
             ),
           ],
@@ -48,15 +50,14 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
             padding: const EdgeInsets.only(left: 19.0),
             child: Material(
               borderRadius: BorderRadius.circular(7),
-              color: const Color(0xFF386BF6),
+              color: colorCard1,
               child: InkWell(
                 borderRadius: BorderRadius.circular(7),
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.15,
                   decoration: BoxDecoration(
-
                     borderRadius: BorderRadius.circular(7),
                     shape: BoxShape.rectangle,
                   ),
@@ -108,10 +109,10 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
             padding: const EdgeInsets.only(left: 19.0),
             child: Material(
               borderRadius: BorderRadius.circular(7),
-              color: secondaryBlue,
+              color: colorCard2,
               child: InkWell(
                 borderRadius: BorderRadius.circular(7),
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.15,
@@ -167,10 +168,10 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
             padding: const EdgeInsets.only(left: 19.0, right: 19),
             child: Material(
               borderRadius: BorderRadius.circular(7),
-              color: const Color(0xFF4F9292),
+              color: colorCard3,
               child: InkWell(
                 borderRadius: BorderRadius.circular(7),
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: MediaQuery.of(context).size.height * 0.15,
@@ -208,7 +209,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
                           ],
                         ),
                       ),
-                       Align(
+                      Align(
                         alignment: AlignmentDirectional(1, 0),
                         child: ImageIcon(
                           AssetImage("assets/images/icons/pin_ftr.png"),
@@ -224,21 +225,21 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
           )
         ],
         options: CarouselOptions(
-            enableInfiniteScroll: false,
-            disableCenter: false,
-            pageSnapping: true,
-            height: MediaQuery.of(context).size.height * 0.15,
-            autoPlay: false,
-            enlargeCenterPage: false,
-            viewportFraction: 0.8,
-            padEnds: false,
-            onPageChanged: (index, reason) {
-              setState(() {
-                _currentFTR = index;
-              });
-            },
-            initialPage: 0,
-         ),
+          enableInfiniteScroll: false,
+          disableCenter: false,
+          pageSnapping: true,
+          height: MediaQuery.of(context).size.height * 0.15,
+          autoPlay: false,
+          enlargeCenterPage: false,
+          viewportFraction: 0.8,
+          padEnds: false,
+          onPageChanged: (index, reason) {
+            setState(() {
+              _currentFTR = index;
+            });
+          },
+          initialPage: 0,
+        ),
       ),
     ]);
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../utils/utils.dart';
 
 class myFacultyBuild extends StatelessWidget {
@@ -6,6 +7,7 @@ class myFacultyBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var mgBorderRadius = BorderRadius.circular(7);
     return Column(
       children: [
         Padding(
@@ -37,11 +39,10 @@ class myFacultyBuild extends StatelessWidget {
               ),
               InkWell(
                 borderRadius: BorderRadius.circular(6),
-                onTap: (){},
+                onTap: () {},
                 child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6)
-                  ),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(6)),
                   margin: EdgeInsets.all(10),
                   child: Text(
                     "View",
@@ -49,7 +50,7 @@ class myFacultyBuild extends StatelessWidget {
                       'Poppins',
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
-                      height: 1.5 ,
+                      height: 1.5,
                       color: const Color(0xff3D31C4),
                     ),
                   ),
@@ -70,45 +71,40 @@ class myFacultyBuild extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   child: Material(
                     color: Color(0xfff4f3ff),
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: mgBorderRadius,
                     child: InkWell(
-                      onTap: (){},
-                      borderRadius: BorderRadius.circular(17),
+                      onTap: () {},
+                      borderRadius: mgBorderRadius,
                       child: Container(
                         padding: EdgeInsets.all(1),
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17),
-
+                          borderRadius: mgBorderRadius,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2, top: 5),
+                              padding: const EdgeInsets.only(left: 2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    strokeAlign: StrokeAlign.outside,
-                                    width: 4,
-                                    color: Colors.white60
-                                  ),
+                                      strokeAlign: StrokeAlign.outside,
+                                      width: 4,
+                                      color: Colors.white60),
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/images/home/faculty.jpg'
-                                      ),
-                                      fit: BoxFit.contain
-                                  ),
+                                          'assets/images/home/faculty.jpg'),
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                             ),
-
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,29 +141,27 @@ class myFacultyBuild extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(4),
                   child: Material(
                     color: Color(0xfff4faf9),
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: mgBorderRadius,
                     child: InkWell(
-                      onTap: (){},
-                      borderRadius: BorderRadius.circular(17),
+                      onTap: () {},
+                      borderRadius: mgBorderRadius,
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17),
-
+                          borderRadius: mgBorderRadius,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2, top: 5),
+                              padding: const EdgeInsets.only(left: 2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -175,20 +169,16 @@ class myFacultyBuild extends StatelessWidget {
                                   border: Border.all(
                                       strokeAlign: StrokeAlign.outside,
                                       width: 4,
-                                      color: Colors.white60
-                                  ),
+                                      color: Colors.white60),
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/images/home/sibi.jpg'
-                                      ),
-                                      fit: BoxFit.contain
-                                  ),
+                                          'assets/images/home/sibi.jpg'),
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                             ),
-
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -225,29 +215,27 @@ class myFacultyBuild extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(4),
                   child: Material(
                     color: Color(0xfff5f4fa),
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: mgBorderRadius,
                     child: InkWell(
-                      onTap: (){},
-                      borderRadius: BorderRadius.circular(17),
+                      onTap: () {},
+                      borderRadius: mgBorderRadius,
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17),
-
+                          borderRadius: mgBorderRadius,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2, top: 5),
+                              padding: const EdgeInsets.only(left: 2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -255,20 +243,16 @@ class myFacultyBuild extends StatelessWidget {
                                   border: Border.all(
                                       strokeAlign: StrokeAlign.outside,
                                       width: 4,
-                                      color: Colors.white60
-                                  ),
+                                      color: Colors.white60),
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/images/home/faculty.jpg'
-                                      ),
-                                      fit: BoxFit.contain
-                                  ),
+                                          'assets/images/home/faculty.jpg'),
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                             ),
-
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,29 +289,27 @@ class myFacultyBuild extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.all(4),
                   child: Material(
                     color: Color(0xfffaf4f5),
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: mgBorderRadius,
                     child: InkWell(
-                      onTap: (){},
-                      borderRadius: BorderRadius.circular(17),
+                      onTap: () {},
+                      borderRadius: mgBorderRadius,
                       child: Container(
                         padding: EdgeInsets.all(3),
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: MediaQuery.of(context).size.height * 0.11,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17),
-
+                          borderRadius: mgBorderRadius,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:2, top: 5),
+                              padding: const EdgeInsets.only(left: 2, top: 5),
                               child: Container(
                                 width: 45,
                                 height: 45,
@@ -335,20 +317,16 @@ class myFacultyBuild extends StatelessWidget {
                                   border: Border.all(
                                       strokeAlign: StrokeAlign.outside,
                                       width: 4,
-                                      color: Colors.white60
-                                  ),
+                                      color: Colors.white60),
                                   color: Colors.white,
                                   shape: BoxShape.circle,
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/images/home/faculty.jpg'
-                                      ),
-                                      fit: BoxFit.contain
-                                  ),
+                                          'assets/images/home/faculty.jpg'),
+                                      fit: BoxFit.contain),
                                 ),
                               ),
                             ),
-
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -385,11 +363,6 @@ class myFacultyBuild extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
-
               ],
             ),
           ),

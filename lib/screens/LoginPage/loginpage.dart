@@ -1,7 +1,9 @@
 // ignore_for_file: camel_case_types
 
-import 'package:flutter/gestures.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import '../../utils/utils.dart';
 import '../Student/Layout.dart';
 
@@ -30,177 +32,97 @@ class _loginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    double baseWidth = 394;
-    double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 1;
-    return GestureDetector(
-      onTap: () {
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
-      child: Scaffold(
-        body: SingleChildScrollView(
-          // physics: NeverScrollableScrollPhysics(),
-          child: Container(
-            decoration: const BoxDecoration(
-              color: Color(0xff000000),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage(
-                  'assets/images/on-boarding/login-bg-1-bg.png',
+    return Padding(
+      padding: MediaQuery.of(context).viewInsets,
+      child: Material(
+        child: Container(
+          padding: EdgeInsets.only(top: 5),
+          height: MediaQuery.of(context).size.height * 0.49,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: Color(0xffffffff),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(35),
+              topRight: Radius.circular(35),
+            ),
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: Color(0x3f000000),
+            //     offset: Offset(0, 4),
+            //     blurRadius: 25,
+            //   ),
+            // ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 6,
+                    width: 70,
+                    decoration: BoxDecoration(
+                        color: Color(0xfff8f8f8),
+                        borderRadius: BorderRadius.circular(50)),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  )
+                ],
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.height * 0.45,
+                height: MediaQuery.of(context).size.height * 0.45,
+                child: Column(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.045,
+                      width: MediaQuery.of(context).size.height,
+                      decoration: BoxDecoration(
+                          color: const Color(0x1F767680),
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: TabBar(
+                          unselectedLabelColor: Colors.black54,
+                          labelColor: Colors.black,
+                          indicatorColor: Colors.white,
+                          indicatorWeight: 1,
+                          indicator: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          controller: tabController,
+                          tabs: const [
+                            Tab(
+                              text: 'Student',
+                            ),
+                            Tab(
+                              text: 'Faculty',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        clipBehavior: Clip.none,
+                        viewportFraction: 1,
+                        physics: NeverScrollableScrollPhysics(),
+                        controller: tabController,
+                        children: const [
+                          StudentTab(),
+                          FacultyTab(),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
               ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin:
-                      EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 36 * fem),
-                  width: double.infinity,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(
-                            0 * fem, 0 * fem, 30 * fem, 0 * fem),
-                        width: 138 * fem,
-                        height: 138 * fem,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 46 * fem,
-                              top: 86 * fem,
-                              child: Align(
-                                child: SizedBox(
-                                  width: 63 * fem,
-                                  height: 47 * fem,
-                                  child: Image.asset(
-                                    'assets/images/on-boarding/ellipse-139.png',
-                                    width: 63 * fem,
-                                    height: 47 * fem,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 0 * fem,
-                              top: 0 * fem,
-                              child: Align(
-                                child: SizedBox(
-                                  width: 138 * fem,
-                                  height: 138 * fem,
-                                  child: Image.asset(
-                                    'assets/images/on-boarding/first-place-medal-1.png',
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: SizedBox(
-                          width: 300.1 * fem,
-                          height: 300.1 * fem,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 30 * fem,
-                                top: 0 * fem,
-                                child: Align(
-                                  child: SizedBox(
-                                    width: 300.1 * fem,
-                                    height: 300.1 * fem,
-                                    child: Image.asset(
-                                      'assets/images/on-boarding/graduation-hat-2.png',
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.61,
-                  padding: EdgeInsets.fromLTRB(30 * fem, 40 * fem, 29 * fem, 0),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(47 * fem),
-                      topRight: Radius.circular(47 * fem),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0x3f000000),
-                        offset: Offset(0 * fem, 4 * fem),
-                        blurRadius: 25 * fem,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.height * 0.45,
-                        height: MediaQuery.of(context).size.height * 0.45,
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 32,
-                              width: MediaQuery.of(context).size.height,
-                              decoration: BoxDecoration(
-                                  color: const Color(0x1F767680),
-                                  borderRadius: BorderRadius.circular(8)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(5),
-                                child: TabBar(
-                                  unselectedLabelColor: Colors.black54,
-                                  labelColor: Colors.black,
-                                  indicatorColor: Colors.white,
-                                  indicatorWeight: 1,
-                                  indicator: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  controller: tabController,
-                                  tabs: const [
-                                    Tab(
-                                      text: 'Student',
-                                    ),
-                                    Tab(
-                                      text: 'Faculty',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: TabBarView(
-                                clipBehavior: Clip.none,
-                                viewportFraction: 1,
-                                physics: NeverScrollableScrollPhysics(),
-                                controller: tabController,
-                                children: const [
-                                  Tab1(),
-                                  Tab2(),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+            ],
           ),
         ),
       ),
@@ -208,407 +130,359 @@ class _loginPageState extends State<LoginPage>
   }
 }
 
-class Tab1 extends StatefulWidget {
-  const Tab1({Key? key}) : super(key: key);
+class StudentTab extends StatefulWidget {
+  const StudentTab({Key? key}) : super(key: key);
 
   @override
-  State<Tab1> createState() => _Tab1State();
+  State<StudentTab> createState() => _StudentTabState();
 }
 
-class _Tab1State extends State<Tab1> {
+class _StudentTabState extends State<StudentTab> {
   bool _isVisible = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Material(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                InkWell(
-                  onTap: () async {},
-                  child: Text(
-                    'Username',
-                    style: SafeGoogleFont(
-                      'Poppins',
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xd3002179),
-                    ),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Username',
+                style: SafeGoogleFont(
+                  'Poppins',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xd3002179),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: TextFormField(
+              autofocus: false,
+              obscureText: false,
+              decoration: const InputDecoration(
+                hintText: 'Type your username',
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffECECEC),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.blueAccent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                errorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: TextFormField(
-                autofocus: false,
-                obscureText: false,
-                decoration: const InputDecoration(
-                  hintText: 'Type your username',
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xffECECEC),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                focusedErrorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
                   ),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  errorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedErrorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
               ),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                InkWell(
-                  onTap: () async {},
-                  child: Text(
-                    'Password',
-                    style: SafeGoogleFont(
-                      'Poppins',
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xd3002179),
-                    ),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Password',
+                style: SafeGoogleFont(
+                  'Poppins',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xd3002179),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: TextFormField(
+              obscureText: !_isVisible,
+              decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _isVisible = !_isVisible;
+                    });
+                  },
+                  icon: _isVisible
+                      ? const Icon(
+                          Icons.visibility,
+                          color: Colors.black,
+                        )
+                      : const Icon(
+                          Icons.visibility_off,
+                          color: Colors.grey,
+                        ),
+                ),
+                hintText: 'type your password',
+                enabledBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffECECEC),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.blueAccent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                errorBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: TextFormField(
-                obscureText: !_isVisible,
-                decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _isVisible = !_isVisible;
-                      });
-                    },
-                    icon: _isVisible
-                        ? const Icon(
-                            Icons.visibility,
-                            color: Colors.black,
-                          )
-                        : const Icon(
-                            Icons.visibility_off,
-                            color: Colors.grey,
-                          ),
+                focusedErrorBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
                   ),
-                  hintText: 'type your password',
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xffECECEC),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  errorBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedErrorBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Layout()),
-                  );
-                },
-                color: const Color(0xff002C64),
-                elevation: 20,
-                splashColor: const Color(0x5c003e8a),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                textColor: const Color(0xffffffff),
-                height: 41,
-                minWidth: MediaQuery.of(context).size.width,
-                child: const Text(
-                  "Continue",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.normal,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+          loginButton(
+            text: 'Login as Student',
+          ),
+        ],
       ),
-    ));
+    );
   }
 }
 
-class Tab2 extends StatefulWidget {
-  const Tab2({Key? key}) : super(key: key);
+class FacultyTab extends StatefulWidget {
+  const FacultyTab({Key? key}) : super(key: key);
 
   @override
-  State<Tab2> createState() => _Tab2State();
+  State<FacultyTab> createState() => _FacultyTabState();
 }
 
-class _Tab2State extends State<Tab2> {
+class _FacultyTabState extends State<FacultyTab> {
   bool _isVisible = false;
-  bool _isPasswordEightCharacters = false;
-  bool _hasPasswordOneNumber = false;
-
-  onPasswordChanged(String password) {
-    final numericRegex = RegExp(r'[0-9]');
-
-    setState(() {
-      _isPasswordEightCharacters = false;
-      if (password.length >= 8) _isPasswordEightCharacters = true;
-
-      _hasPasswordOneNumber = false;
-      if (numericRegex.hasMatch(password)) _hasPasswordOneNumber = true;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Material(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                InkWell(
-                  onTap: () async {},
-                  child: Text(
-                    'Faculty Username',
-                    style: SafeGoogleFont(
-                      'Poppins',
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xd3002179),
-                    ),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Faculty Username',
+                style: SafeGoogleFont(
+                  'Poppins',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xd3002179),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: TextFormField(
+              autofocus: false,
+              obscureText: false,
+              decoration: const InputDecoration(
+                hintText: 'username',
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffECECEC),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.blueAccent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                errorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: TextFormField(
-                autofocus: false,
-                obscureText: false,
-                decoration: const InputDecoration(
-                  hintText: 'username',
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xffECECEC),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                focusedErrorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
                   ),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  errorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedErrorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
               ),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                InkWell(
-                  onTap: () async {},
-                  child: Text(
-                    'Password',
-                    style: SafeGoogleFont(
-                      'Poppins',
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xd3002179),
-                    ),
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Password',
+                style: SafeGoogleFont(
+                  'Poppins',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xd3002179),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: TextFormField(
+              obscureText: !_isVisible,
+              decoration: InputDecoration(
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _isVisible = !_isVisible;
+                    });
+                  },
+                  icon: _isVisible
+                      ? const Icon(
+                          Icons.visibility,
+                          color: Colors.black,
+                        )
+                      : const Icon(
+                          Icons.visibility_off,
+                          color: Colors.grey,
+                        ),
+                ),
+                hintText: 'password',
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xffECECEC),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.blueAccent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                errorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: TextFormField(
-                onChanged: (password) => onPasswordChanged(password),
-                obscureText: !_isVisible,
-                decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _isVisible = !_isVisible;
-                      });
-                    },
-                    icon: _isVisible
-                        ? const Icon(
-                            Icons.visibility,
-                            color: Colors.black,
-                          )
-                        : const Icon(
-                            Icons.visibility_off,
-                            color: Colors.grey,
-                          ),
+                focusedErrorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
                   ),
-                  hintText: 'password',
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0xffECECEC),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueAccent,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  errorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
-                  ),
-                  focusedErrorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-              child: Column(
-                children: [
-                  MaterialButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Layout()),
-                      );
-                    },
-                    color: const Color(0xff002C64),
-                    elevation: 20,
-                    splashColor: const Color(0x5c003e8a),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    textColor: const Color(0xffffffff),
-                    height: 41,
-                    minWidth: MediaQuery.of(context).size.width,
-                    child: const Text(
-                      "Continue",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        fontStyle: FontStyle.normal,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ),
+          loginButton(
+            text: 'Login as Faculty',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class loginButton extends StatelessWidget {
+  const loginButton({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+      child: MaterialButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Layout()),
+          );
+        },
+        color: const Color(0xff016bff),
+        elevation: 1,
+        splashColor: const Color(0x5c003e8a),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(7),
+        ),
+        textColor: const Color(0xffffffff),
+        height: 41,
+        minWidth: MediaQuery.of(context).size.width,
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.normal,
+          ),
         ),
       ),
-    ));
+    );
   }
 }
