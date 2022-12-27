@@ -39,16 +39,6 @@ class _loginPageState extends State<LoginPage>
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          toolbarHeight: 0,
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: Color(0xFF002C64),
-            statusBarIconBrightness: Brightness.light,
-            // For Android (dark icons)
-            statusBarBrightness: Brightness.dark, // For iOS (dark icons)
-          ),
-        ),
         backgroundColor: Colors.white,
         body: CustomScrollView(
           slivers: [
@@ -78,13 +68,13 @@ class _loginPageState extends State<LoginPage>
                             topLeft: Radius.circular(35),
                             topRight: Radius.circular(35),
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0x3f000000),
-                              offset: Offset(0, 4),
-                              blurRadius: 25,
-                            ),
-                          ],
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: Color(0x3f000000),
+                          //     offset: Offset(0, 4),
+                          //     blurRadius: 25,
+                          //   ),
+                          // ],
                         ),
                         child: Container(
                           padding: EdgeInsets.fromLTRB(30, 30, 30, 0),
