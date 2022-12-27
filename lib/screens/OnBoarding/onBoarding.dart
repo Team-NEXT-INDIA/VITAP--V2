@@ -100,14 +100,9 @@ class Onboarding extends StatelessWidget {
                           ),
                           child: InkWell(
                             borderRadius: BorderRadius.circular(50),
-                            onTap: () => showModalBottomSheet(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              isScrollControlled: true,
-                              context: context,
-                              builder: (context) => LoginPage(),
-                            ),
+                            onTap: () => Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage())),
 
                             splashColor: Colors.white10, //
                             child: Padding(

@@ -1,9 +1,11 @@
 // ignore_for_file: camel_case_types
 
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../customs/theme.dart';
 import '../../utils/utils.dart';
 import '../Student/Layout.dart';
 
@@ -32,98 +34,129 @@ class _loginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: MediaQuery.of(context).viewInsets,
-      child: Material(
-        child: Container(
-          padding: EdgeInsets.only(top: 5),
-          height: MediaQuery.of(context).size.height * 0.49,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            color: Color(0xffffffff),
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(35),
-              topRight: Radius.circular(35),
-            ),
-            // boxShadow: [
-            //   BoxShadow(
-            //     color: Color(0x3f000000),
-            //     offset: Offset(0, 4),
-            //     blurRadius: 25,
-            //   ),
-            // ],
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          toolbarHeight: 0,
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Color(0xFF002C64),
+            statusBarIconBrightness: Brightness.light,
+            // For Android (dark icons)
+            statusBarBrightness: Brightness.dark, // For iOS (dark icons)
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 6,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        color: Color(0xfff8f8f8),
-                        borderRadius: BorderRadius.circular(50)),
+        ),
+        backgroundColor: Colors.white,
+        body: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(
+                      'assets/images/on-boarding/login-bg.png',
+                    ),
                   ),
-                  SizedBox(
-                    height: 25,
-                  )
-                ],
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.height * 0.45,
-                height: MediaQuery.of(context).size.height * 0.45,
+                ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.045,
-                      width: MediaQuery.of(context).size.height,
-                      decoration: BoxDecoration(
-                          color: const Color(0x1F767680),
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: TabBar(
-                          unselectedLabelColor: Colors.black54,
-                          labelColor: Colors.black,
-                          indicatorColor: Colors.white,
-                          indicatorWeight: 1,
-                          indicator: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(6),
+                    FadeInUpBig(
+                      duration: Duration(seconds: 1),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.5,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                          color: Color(0xffffffff),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(35),
+                            topRight: Radius.circular(35),
                           ),
-                          controller: tabController,
-                          tabs: const [
-                            Tab(
-                              text: 'Student',
-                            ),
-                            Tab(
-                              text: 'Faculty',
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x3f000000),
+                              offset: Offset(0, 4),
+                              blurRadius: 25,
                             ),
                           ],
                         ),
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(30, 30, 30, 0),
+                          child: Column(
+                            children: [
+                              // Row(
+                              //   mainAxisAlignment: MainAxisAlignment.center,
+                              //   children: [
+                              //     Container(
+                              //       height: 6,
+                              //       width: 70,
+                              //       decoration: BoxDecoration(
+                              //           color: Color(0xfff8f8f8),
+                              //           borderRadius: BorderRadius.circular(50)),
+                              //     ),
+                              //     SizedBox(
+                              //       height: 20,
+                              //     )
+                              //   ],
+                              // ),
+                              Container(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.045,
+                                width: MediaQuery.of(context).size.height,
+                                decoration: BoxDecoration(
+                                    color: const Color(0x1F767680),
+                                    borderRadius: BorderRadius.circular(8)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(4),
+                                  child: TabBar(
+                                    unselectedLabelColor: Colors.black54,
+                                    labelColor: Colors.black,
+                                    indicatorColor: Colors.white,
+                                    indicatorWeight: 1,
+                                    indicator: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    controller: tabController,
+                                    tabs: const [
+                                      Tab(
+                                        text: 'Student',
+                                      ),
+                                      Tab(
+                                        text: 'Faculty',
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: TabBarView(
+                                  clipBehavior: Clip.none,
+                                  viewportFraction: 1,
+                                  physics: NeverScrollableScrollPhysics(),
+                                  controller: tabController,
+                                  children: const [
+                                    StudentTab(),
+                                    FacultyTab(),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                     ),
-                    Expanded(
-                      child: TabBarView(
-                        clipBehavior: Clip.none,
-                        viewportFraction: 1,
-                        physics: NeverScrollableScrollPhysics(),
-                        controller: tabController,
-                        children: const [
-                          StudentTab(),
-                          FacultyTab(),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );

@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
-      <change afterPath="$PROJECT_DIR$/assets/images/on-boarding/login-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/SearchBar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customs/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customs/theme.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/OnBoarding/onBoarding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/OnBoarding/onBoarding.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/FeatureCards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/FeatureCards.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyButton.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
