@@ -60,7 +60,8 @@ const CarouselShadow = const [
     offset: Offset(5, 22),
     spreadRadius: 0.22,
     blurRadius: 32,
-    color: Color.fromRGBO(162, 159, 159, 0.93),
+    color: Colors.transparent,
+    // color: Color.fromRGBO(162, 159, 159, 0.93),
   )
 ];
 

@@ -32,7 +32,7 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider2',
@@ -171,7 +171,7 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider3',
@@ -310,7 +310,7 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider1',
@@ -459,7 +459,7 @@ class _PromoSliderState extends State<PromoSlider> {
           Container(
             margin: EdgeInsets.only(bottom: 10),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 1),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 1),
               child: Hero(
                 transitionOnUserGestures: true,
                 tag: 'mainslider4',

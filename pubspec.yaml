@@ -46,7 +46,6 @@ dependencies:
   font_awesome_flutter: ^10.3.0
   barcode_widget: ^2.0.3
   flip_card: ^0.6.0
-  modal_bottom_sheet: ^2.1.2
 
 
 dev_dependencies:
