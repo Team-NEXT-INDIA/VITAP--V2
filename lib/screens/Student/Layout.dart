@@ -6,7 +6,6 @@ import 'package:myapp/screens/Student/Homepage/Homepage.dart';
 import 'package:myapp/screens/Student/MyProfilePage/Profilepage.dart';
 
 import '../../customs/theme.dart';
-import 'Homepage/components/Drawer.dart';
 import 'TimetablePage/Timetablepage.dart';
 
 class Layout extends StatefulWidget {
@@ -33,20 +32,9 @@ class _LayoutState extends State<Layout> {
     });
   }
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  void _openEndDrawer() {
-    _scaffoldKey.currentState!.openEndDrawer();
-  }
-
-  void _closeEndDrawer() {
-    Navigator.of(context).pop();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: SideMenu(),
       extendBody: false,
       body: pages[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(

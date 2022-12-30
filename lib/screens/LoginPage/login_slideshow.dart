@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../customs/theme.dart';
 
 class LoginSlideshow extends StatefulWidget {
-  const LoginSlideshow({Key? key}) : super(key: key);
+  LoginSlideshow({Key? key}) : super(key: key);
 
   @override
   State<LoginSlideshow> createState() => _loginPageState();
@@ -11,6 +11,7 @@ class LoginSlideshow extends StatefulWidget {
 
 class _loginPageState extends State<LoginSlideshow>
     with TickerProviderStateMixin {
+  late final String imageBG;
   late final AnimationController _controller =
       AnimationController(duration: const Duration(seconds: 40), vsync: this)
         ..repeat(reverse: true);
@@ -20,8 +21,8 @@ class _loginPageState extends State<LoginSlideshow>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -34,7 +35,7 @@ class _loginPageState extends State<LoginSlideshow>
       child: ScaleTransition(
         scale: _animation,
         child: Image.asset(
-          'assets/images/home/login_bg.png',
+          'assets/images/on-boarding/vitap-drone.jpeg',
           fit: BoxFit.fitHeight,
         ),
       ),

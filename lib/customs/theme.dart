@@ -3,20 +3,20 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-Color primaryColor = const Color(0xFF103cc9);
+Color primaryColor = const Color(0xFF004bff);
 Color scaffoldBackground2 = const Color(0xffF9F9F9);
-Color scaffoldBackground = const Color(0xffffffff);
+Color scaffoldBackground = const Color(0xFFFFFFFF);
 
 Color iconPrimary = const Color(0xff212121);
 Color footerBackground = const Color(0xFFF0F0F0);
 Color titlePrimary = const Color(0xff232323);
 Color secondaryBlue = const Color(0xFF0a2885);
-Color homeHeadericonbg = const Color(0xFFe7ebf8);
+Color homeHeadericonbg = Colors.white;
 Color homeHeadericonfg = const Color(0xFF103cc9);
 Color ogColor = const Color(0xff174EE4);
 //Box Shadow For Blue Primary
 
-const iconColor30 = Color(0xffe7ebf8);
+const iconColor30 = Color(0xffffffff);
 var buttonBackground = Color(0xFF103cc9);
 
 var profileGradient = BoxDecoration(
@@ -57,12 +57,11 @@ var containerDecoration = BoxDecoration(
 
 const CarouselShadow = const [
   BoxShadow(
-    offset: Offset(5, 22),
-    spreadRadius: 0.22,
-    blurRadius: 32,
-    color: Colors.transparent,
-    // color: Color.fromRGBO(162, 159, 159, 0.93),
-  )
+    color: Color(0x30000000),
+    offset: const Offset(0, 20),
+    blurRadius: 30,
+    spreadRadius: -5,
+  ),
 ];
 
 var CarouselGradient = LinearGradient(

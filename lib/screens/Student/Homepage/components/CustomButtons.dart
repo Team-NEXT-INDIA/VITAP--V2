@@ -19,7 +19,7 @@ class forYouButtons extends StatelessWidget {
           elevation: 19.0,
           borderOnForeground: false,
           borderRadius: BorderRadius.circular(7),
-          color: Colors.white,
+          color: Colors.transparent,
           child: InkWell(
             borderRadius: BorderRadius.circular(7),
             onTap: () {},
@@ -27,7 +27,7 @@ class forYouButtons extends StatelessWidget {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: homeHeadericonbg,
+                color: Colors.transparent,
                 // gradient: const LinearGradient(
                 //   colors: [Color(0xFF4B7BFD), Color(0xFF174EE4)],
                 //   stops: [0, 1],

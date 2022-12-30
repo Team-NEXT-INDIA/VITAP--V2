@@ -25,6 +25,9 @@ class _PromoSliderState extends State<PromoSlider> {
 
   @override
   Widget build(BuildContext context) {
+    var inkwellRadius = BorderRadius.all(Radius.circular(25));
+    var containerBorderRadius = BorderRadius.circular(25);
+    var clipRectBorderRadius = BorderRadius.circular(25);
     return Column(children: <Widget>[
       CarouselSlider(
         carouselController: _PromoCarouselController,
@@ -39,10 +42,10 @@ class _PromoSliderState extends State<PromoSlider> {
                 child: Container(
                   margin: const EdgeInsets.all(6),
                   // height: 550,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.of(context).size.width * 1.3,
+                  height: MediaQuery.of(context).size.height * 0.8,
                   child: InkWell(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: inkwellRadius,
                     onTap: () {
                       Navigator.push(
                         context,
@@ -52,11 +55,11 @@ class _PromoSliderState extends State<PromoSlider> {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: clipRectBorderRadius,
                           child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
-                              borderRadius: BorderRadius.circular(17),
+                              borderRadius: containerBorderRadius,
                               image: DecorationImage(
                                 image: AssetImage(
                                     'assets/images/home/slider-2.png'),
@@ -178,10 +181,10 @@ class _PromoSliderState extends State<PromoSlider> {
                 child: Container(
                   margin: const EdgeInsets.all(6),
                   // height: 550,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.of(context).size.width * 1.3,
+                  height: MediaQuery.of(context).size.height * 0.8,
                   child: InkWell(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: inkwellRadius,
                     onTap: () {
                       Navigator.push(
                         context,
@@ -191,11 +194,11 @@ class _PromoSliderState extends State<PromoSlider> {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: clipRectBorderRadius,
                           child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
-                              borderRadius: BorderRadius.circular(17),
+                              borderRadius: containerBorderRadius,
                               image: DecorationImage(
                                 image: AssetImage(
                                     'assets/images/home/slider-3.png'),
@@ -327,10 +330,10 @@ class _PromoSliderState extends State<PromoSlider> {
                   // ),
                   margin: const EdgeInsets.all(6),
                   // height: 550,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.of(context).size.width * 1.3,
+                  height: MediaQuery.of(context).size.height * 0.8,
                   child: InkWell(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: inkwellRadius,
                     onTap: () {
                       Navigator.push(
                         context,
@@ -340,10 +343,10 @@ class _PromoSliderState extends State<PromoSlider> {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: clipRectBorderRadius,
                           child: Ink(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(17),
+                              borderRadius: containerBorderRadius,
                               boxShadow: CarouselShadow,
                               image: DecorationImage(
                                 image:
@@ -476,10 +479,10 @@ class _PromoSliderState extends State<PromoSlider> {
                   // ),
                   margin: const EdgeInsets.all(6),
                   // height: 550,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.of(context).size.width * 1.3,
+                  height: MediaQuery.of(context).size.height * 0.8,
                   child: InkWell(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderRadius: inkwellRadius,
                     onTap: () {
                       Navigator.push(
                         context,
@@ -489,11 +492,11 @@ class _PromoSliderState extends State<PromoSlider> {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: clipRectBorderRadius,
                           child: Ink(
                             decoration: BoxDecoration(
                               boxShadow: CarouselShadow,
-                              borderRadius: BorderRadius.circular(17),
+                              borderRadius: containerBorderRadius,
                               image: DecorationImage(
                                 image:
                                     AssetImage('assets/images/home/slider.png'),
@@ -608,13 +611,15 @@ class _PromoSliderState extends State<PromoSlider> {
         ],
         options: CarouselOptions(
             enableInfiniteScroll: false,
-            disableCenter: true,
+            disableCenter: false,
             pageSnapping: true,
-            height: 480,
+            height: 450,
             autoPlay: true,
-            enlargeCenterPage: false,
+            autoPlayInterval: const Duration(seconds: 10),
+            enlargeCenterPage: true,
+            enlargeFactor: 0.3,
             viewportFraction: 0.9,
-            aspectRatio: 12 / 16,
+            // aspectRatio: 16 / 2,
             onPageChanged: (index, reason) {
               setState(() {
                 _current = index;
