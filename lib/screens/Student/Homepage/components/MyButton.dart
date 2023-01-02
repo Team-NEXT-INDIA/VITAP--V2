@@ -19,6 +19,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
     double containerwidth = MediaQuery.of(context).size.width * 0.15;
 
     var iconHeight = 30.0;
+    double subFontSize = 12;
     return Column(
       children: [
         Padding(
@@ -83,7 +84,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                     "My Mentor",
                     style: SafeGoogleFont(
                       'Poppins',
-                      fontSize: 09,
+                      fontSize: subFontSize,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff131313),
                     ),
@@ -116,7 +117,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                     "My Courses",
                     style: SafeGoogleFont(
                       'Poppins',
-                      fontSize: 09,
+                      fontSize: subFontSize,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff131313),
                     ),
@@ -149,7 +150,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                     "My Receipts",
                     style: SafeGoogleFont(
                       'Poppins',
-                      fontSize: 09,
+                      fontSize: subFontSize,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff131313),
                     ),
@@ -182,7 +183,7 @@ class _MyButtonsViewState extends State<MyButtonsView> {
                     "My Wallet",
                     style: SafeGoogleFont(
                       'Poppins',
-                      fontSize: 09,
+                      fontSize: subFontSize,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff131313),
                     ),
