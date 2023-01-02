@@ -17,7 +17,7 @@ Color ogColor = const Color(0xff174EE4);
 //Box Shadow For Blue Primary
 
 const iconColor30 = Color(0xffffffff);
-var buttonBackground = Color(0xFF103cc9);
+var buttonBackground = Color(0xFF4869fd);
 
 var profileGradient = BoxDecoration(
     image: DecorationImage(
@@ -36,9 +36,9 @@ var primaryBoxShadow = BoxShadow(
 
 var primaryBoxShadowLite = BoxShadow(
   offset: Offset(10, 14),
-  spreadRadius: -24,
+  spreadRadius: -14,
   blurRadius: 39,
-  color: Color.fromRGBO(56, 107, 246, 0.33),
+  color: Color.fromRGBO(87, 87, 87, 0.44313725490196076),
 );
 // Container Decorations
 var containerDecoration = BoxDecoration(

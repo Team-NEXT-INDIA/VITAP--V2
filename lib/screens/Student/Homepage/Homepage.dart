@@ -217,9 +217,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 style: SafeGoogleFont(
                                   'Poppins',
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w400,
                                   height: 1,
-                                  color: const Color(0xff949d9f),
+                                  color: const Color(0xff9b9b9c),
                                 ),
                               ),
                               Text(
@@ -227,9 +227,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 style: SafeGoogleFont(
                                   'Poppins',
                                   fontSize: 28,
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w600,
                                   height: 1.5,
-                                  color: const Color(0xff2a2b40),
+                                  color: const Color(0xff131313),
                                 ),
                               )
                             ],
@@ -249,21 +249,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     PromoSlider(),
-                    addVerticalSpace(20),
-                    MyButtonsView(),
-                    // GridButtons(),
-                    addVerticalSpace(20),
-
-                    addVerticalSpace(20),
-                    StreamSliderBuild(),
-
-                    addVerticalSpace(20),
-                    upcomingEventsBuild(),
-                    addVerticalSpace(20),
-                    FeatureCardsWidget(),
-                    addVerticalSpace(20),
-                    addVerticalSpace(20),
-                    myFacultyBuild(),
                     addVerticalSpace(20),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -349,7 +334,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    // GridButtons(),
+                    addVerticalSpace(10),
+                    MyButtonsView(),
+                    addVerticalSpace(10),
+                    StreamSliderBuild(),
+
                     addVerticalSpace(20),
+                    upcomingEventsBuild(),
+                    addVerticalSpace(20),
+                    FeatureCardsWidget(),
+                    addVerticalSpace(20),
+                    myFacultyBuild(),
+                    addVerticalSpace(20),
+
                     footerBuild()
                   ],
                 ),

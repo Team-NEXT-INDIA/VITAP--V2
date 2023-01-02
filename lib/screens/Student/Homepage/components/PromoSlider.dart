@@ -46,12 +46,6 @@ class _PromoSliderState extends State<PromoSlider> {
                   height: MediaQuery.of(context).size.height * 0.8,
                   child: InkWell(
                     borderRadius: inkwellRadius,
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => PromoView()),
-                      );
-                    },
                     child: Stack(
                       children: [
                         ClipRRect(

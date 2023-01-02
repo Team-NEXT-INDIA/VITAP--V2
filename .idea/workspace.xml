@@ -5,27 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
-      <change afterPath="$PROJECT_DIR$/assets/images/home/logo_width.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/on-boarding/pattern-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/on-boarding/vitap-drone.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/StreamingComponents/Student/streams_build.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/OnBoarding/on_boardingSlideshow.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/custom_gridbuttons.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/stream_slider_build.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/book-stack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/default_faculty_header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/icon-bg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/icon-bg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/icon-bg3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/icon-bg4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/mentor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/purse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/icons/receipt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/customs/onTapScale.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/logo_width.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/StreamingComponents/Student/streams_build.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/StreamingComponents/Student/streams_build.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/customs/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customs/theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/LoginPage/login_slideshow.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/LoginPage/login_slideshow.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/LoginPage/loginpage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/OnBoarding/onBoarding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/OnBoarding/onBoarding.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/Drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/Drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyButton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/Profilepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/Profilepage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/SearchBar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/SearchBar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
