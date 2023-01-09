@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,7 +13,8 @@ Color footerBackground = const Color(0xFFfefefe);
 Color titlePrimary = const Color(0xff232323);
 Color secondaryBlue = const Color(0xFF0a2885);
 Color homeHeadericonbg = Colors.white;
-Color homeHeadericonfg = const Color(0xFF103cc9);
+// Color homeHeadericonfg = const Color(0xFF103cc9);
+Color homeHeadericonfg = CupertinoColors.darkBackgroundGray;
 Color ogColor = const Color(0xff174EE4);
 //Box Shadow For Blue Primary
 
@@ -52,11 +54,13 @@ var containerDecoration = BoxDecoration(
       // color: Color.fromRGBO(0, 0, 0, 0.22),
     ),
   ],
-  color: Color(0xfff8f8fe),
+  // color: Color(0xfff8f8fe),
+  color: CupertinoColors.secondarySystemBackground,
   border: Border.all(
-    color: Color(0xfffefefe),
+    // color: Color(0xfffefefe),
+    color: Colors.white,
     strokeAlign: StrokeAlign.outside,
-    width: 0.3,
+    width: 1,
   ),
   borderRadius: BorderRadius.circular(16),
 );

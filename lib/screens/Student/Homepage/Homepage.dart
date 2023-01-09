@@ -108,130 +108,121 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   // StretchMode.fadeTitle
                 ],
                 background: Container(
+                  height: MediaQuery.of(context).size.width * 0.41,
                   color: scaffoldBackground,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      AnimatedOpacity(
-                        opacity: _isScrolled ? 0.0 : 1.0,
-                        duration: Duration(milliseconds: 900),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                top: 45,
-                                left: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Material(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 45,
+                              left: 20,
+                            ),
+                            child: Column(
+                              children: [
+                                Material(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: homeHeadericonbg,
+                                  elevation: 0,
+                                  child: InkWell(
                                     borderRadius: BorderRadius.circular(50),
-                                    color: homeHeadericonbg,
-                                    elevation: 0,
-                                    child: InkWell(
-                                      borderRadius: BorderRadius.circular(50),
-                                      onTap: () {
-                                        _innerDrawerKey.currentState?.toggle();
-                                      },
-                                      child: Container(
-                                        width: 55,
-                                        height: 55,
-                                        decoration: BoxDecoration(
-                                          // color: const Color(0x59c4c4c4),
-                                          border: Border.all(
-                                            color: Color(0xffefefef),
-                                            width:
-                                                0.8, //                   <--- border width here
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(25),
+                                    onTap: () {
+                                      _innerDrawerKey.currentState?.toggle();
+                                    },
+                                    child: Container(
+                                      width: 55,
+                                      height: 55,
+                                      decoration: BoxDecoration(
+                                        // color: const Color(0x59c4c4c4),
+                                        border: Border.all(
+                                          color: Color(0xffefefef),
+                                          width:
+                                              0.8, //                   <--- border width here
                                         ),
-                                        child: Icon(
-                                          FontAwesomeIcons.user,
-                                          color: homeHeadericonfg,
-                                        ),
+                                        borderRadius: BorderRadius.circular(25),
+                                      ),
+                                      child: Icon(
+                                        FontAwesomeIcons.user,
+                                        color: homeHeadericonfg,
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                top: 35,
-                                right: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Builder(
-                                    builder: (context) {
-                                      return Material(
-                                        elevation: 19,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 35,
+                              right: 20,
+                            ),
+                            child: Column(
+                              children: [
+                                Builder(
+                                  builder: (context) {
+                                    return Material(
+                                      elevation: 19,
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: homeHeadericonbg,
+                                      child: InkWell(
                                         borderRadius: BorderRadius.circular(50),
-                                        color: homeHeadericonbg,
-                                        child: InkWell(
-                                          borderRadius:
-                                              BorderRadius.circular(50),
-                                          onTap: () {},
-                                          child: Container(
-                                            width: 55,
-                                            height: 55,
-                                            decoration: BoxDecoration(
-                                              // color: const Color(0x59c4c4c4),
-                                              border: Border.all(
-                                                color: Color(0xffefefef),
-                                                width:
-                                                    0.8, //                   <--- border width here
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
+                                        onTap: () {},
+                                        child: Container(
+                                          width: 55,
+                                          height: 55,
+                                          decoration: BoxDecoration(
+                                            // color: const Color(0x59c4c4c4),
+                                            border: Border.all(
+                                              color: Color(0xffefefef),
+                                              width:
+                                                  0.8, //                   <--- border width here
                                             ),
-                                            child: Icon(
-                                              FontAwesomeIcons.bell,
-                                              color: homeHeadericonfg,
-                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                          ),
+                                          child: Icon(
+                                            FontAwesomeIcons.bell,
+                                            color: homeHeadericonfg,
                                           ),
                                         ),
-                                      );
-                                    },
-                                  )
-                                ],
+                                      ),
+                                    );
+                                  },
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20, left: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Welcome Back👋",
+                              style: SafeGoogleFont(
+                                'Poppins',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                                height: 1,
+                                color: const Color(0xff9b9b9c),
+                              ),
+                            ),
+                            Text(
+                              "Samuel Philip",
+                              style: SafeGoogleFont(
+                                'Poppins',
+                                fontSize: 28,
+                                fontWeight: FontWeight.w600,
+                                height: 1.5,
+                                color: const Color(0xff131313),
                               ),
                             )
                           ],
-                        ),
-                      ),
-                      AnimatedOpacity(
-                        opacity: _isScrolled ? 0.0 : 1.0,
-                        duration: Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Welcome Back👋",
-                                style: SafeGoogleFont(
-                                  'Poppins',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
-                                  height: 1,
-                                  color: const Color(0xff9b9b9c),
-                                ),
-                              ),
-                              Text(
-                                "Samuel Philip",
-                                style: SafeGoogleFont(
-                                  'Poppins',
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.5,
-                                  color: const Color(0xff131313),
-                                ),
-                              )
-                            ],
-                          ),
                         ),
                       ),
                     ],

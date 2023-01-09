@@ -607,10 +607,10 @@ class _PromoSliderState extends State<PromoSlider> {
             enableInfiniteScroll: false,
             disableCenter: false,
             pageSnapping: true,
-            height: 450,
+            height: MediaQuery.of(context).size.width * 1.2,
             autoPlay: true,
-            enlargeCenterPage: true,
-            enlargeFactor: 0.3,
+            enlargeCenterPage: false,
+            enlargeFactor: 0.2,
             viewportFraction: 0.9,
             // aspectRatio: 16 / 2,
             onPageChanged: (index, reason) {

@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/customs/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customs/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Testings/evant_builds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Testings/evant_builds.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

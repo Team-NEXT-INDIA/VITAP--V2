@@ -72,7 +72,8 @@ class _upcomingEventsBuildState extends State<upcomingEventsBuild> {
           carouselController: eventsCarouselController,
           items: [
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.only(
+                  left: 18, right: 10, top: 10, bottom: 10),
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.6,
                 decoration: BoxDecoration(
@@ -697,13 +698,13 @@ class _upcomingEventsBuildState extends State<upcomingEventsBuild> {
             height: MediaQuery.of(context).size.width * 0.83,
             autoPlay: true,
             enlargeCenterPage: false,
-            viewportFraction: 0.86,
+            viewportFraction: 0.9,
             onPageChanged: (index1, reason) {
               setState(() {
                 current1 = index1;
               });
             },
-            padEnds: true,
+            padEnds: false,
             initialPage: 0,
           ),
         ),
