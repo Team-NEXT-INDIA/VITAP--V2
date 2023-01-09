@@ -15,12 +15,10 @@ class Copyright extends StatelessWidget {
         addVerticalSpace(20),
         Text(
           "© 2023 Next Verse LLC  |  VITAP SDC ",
-          style: SafeGoogleFont(
-              "Poppins",
+          style: SafeGoogleFont("Poppins",
               color: Color(0xffBDB9B9),
               fontSize: 12,
-              fontWeight: FontWeight.w300
-          ),
+              fontWeight: FontWeight.w300),
         ),
         Text(
           "Beta version : 0.0121",

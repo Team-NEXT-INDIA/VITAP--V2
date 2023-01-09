@@ -1,15 +1,12 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_drawer/inner_drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:myapp/screens/Student/Homepage/components/BannerBuild.dart';
 import 'package:myapp/screens/Student/Homepage/components/FeatureCards.dart';
 import 'package:myapp/screens/Student/Homepage/components/Footer.dart';
 import 'package:myapp/screens/Student/Homepage/components/MyFacultyBuild.dart';
 import 'package:myapp/screens/Student/Homepage/components/PromoSlider.dart';
-import 'package:myapp/screens/Student/Homepage/components/UpcomingEvents.dart';
 import 'package:myapp/screens/Student/Homepage/stream_slider_build.dart';
 import 'package:myapp/utils/utils.dart';
 
@@ -18,6 +15,7 @@ import '../../../utils/widget_functions.dart';
 import 'components/CustomButtons.dart';
 import 'components/Drawer.dart';
 import 'components/MyButton.dart';
+import 'components/UpcomingEvents.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -84,7 +82,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               collapsedHeight: 2,
               toolbarHeight: 1,
               automaticallyImplyLeading: false,
-              expandedHeight: 160.0,
+              expandedHeight: MediaQuery.of(context).size.width * 0.41,
               elevation: 0,
               pinned: true,
               floating: false,
@@ -250,11 +248,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   children: [
                     PromoSlider(),
                     addVerticalSpace(20),
+
+                    upcomingEventsBuild(),
+                    addVerticalSpace(20),
                     Padding(
                       padding: const EdgeInsets.only(
                           top: 0, left: 17, right: 17, bottom: 20),
                       child: Container(
-                        height: MediaQuery.of(context).size.width * 0.6,
+                        height: MediaQuery.of(context).size.width * 0.57,
                         decoration: containerDecoration,
                         child: Padding(
                           padding: const EdgeInsets.all(20),
@@ -335,19 +336,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       ),
                     ),
                     // GridButtons(),
+                    bannerBuild(),
                     addVerticalSpace(10),
                     MyButtonsView(),
                     addVerticalSpace(10),
                     StreamSliderBuild(),
-
                     addVerticalSpace(20),
-                    upcomingEventsBuild(),
+
                     addVerticalSpace(20),
                     FeatureCardsWidget(),
                     addVerticalSpace(20),
-                    myFacultyBuild(),
+                    MyFacultyBuild(),
                     addVerticalSpace(20),
-
                     footerBuild()
                   ],
                 ),

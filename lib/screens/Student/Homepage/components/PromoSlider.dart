@@ -134,7 +134,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                               children: [
                                                 Expanded(
                                                   child: Text(
-                                                    'Tic-Tech-Toe: an interactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
+                                                    'Tic-Tech-Toe: an Robotoactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
                                                     maxLines: 3,
                                                     style: SafeGoogleFont(
                                                       'Poppins',
@@ -273,7 +273,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                               children: [
                                                 Expanded(
                                                   child: Text(
-                                                    'Tic-Tech-Toe: an interactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
+                                                    'Tic-Tech-Toe: an Robotoactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
                                                     maxLines: 3,
                                                     style: SafeGoogleFont(
                                                       'Poppins',
@@ -422,7 +422,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                               children: [
                                                 Expanded(
                                                   child: Text(
-                                                    'Tic-Tech-Toe: an interactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
+                                                    'Tic-Tech-Toe: an Robotoactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
                                                     maxLines: 3,
                                                     style: SafeGoogleFont(
                                                       'Poppins',
@@ -571,7 +571,7 @@ class _PromoSliderState extends State<PromoSlider> {
                                               children: [
                                                 Expanded(
                                                   child: Text(
-                                                    'Tic-Tech-Toe: an interactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
+                                                    'Tic-Tech-Toe: an Robotoactive fireside chat for introducing students into the different technical domains through well-crafted roadmaps.',
                                                     maxLines: 3,
                                                     style: SafeGoogleFont(
                                                       'Poppins',
@@ -609,7 +609,6 @@ class _PromoSliderState extends State<PromoSlider> {
             pageSnapping: true,
             height: 450,
             autoPlay: true,
-            autoPlayInterval: const Duration(seconds: 10),
             enlargeCenterPage: true,
             enlargeFactor: 0.3,
             viewportFraction: 0.9,
@@ -628,7 +627,7 @@ class _PromoSliderState extends State<PromoSlider> {
         effect: WormEffect(
           offset: 3.0,
           dotWidth: 30.0,
-          dotHeight: 2.0,
+          dotHeight: 5.0,
           spacing: 5.0,
           radius: 10,
           dotColor: Color(0x868a8a8a),
@@ -638,7 +637,7 @@ class _PromoSliderState extends State<PromoSlider> {
           activeDotColor: secondaryBlue,
         ),
       ),
-      addVerticalSpace(20),
+      addVerticalSpace(10),
     ]);
   }
 }

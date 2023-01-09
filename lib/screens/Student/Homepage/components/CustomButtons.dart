@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/customs/onTapScale.dart';
 
 import '../../../../customs/theme.dart';
 import '../../../../utils/utils.dart';
@@ -13,21 +14,21 @@ class forYouButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var borderRadius2 = BorderRadius.circular(50);
     return Column(
       children: [
         Material(
           elevation: 19.0,
           borderOnForeground: false,
-          borderRadius: BorderRadius.circular(7),
+          borderRadius: borderRadius2,
           color: Colors.transparent,
-          child: InkWell(
-            borderRadius: BorderRadius.circular(7),
+          child: CustomTap(
             onTap: () {},
             child: Container(
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: Colors.transparent,
+                color: Color(0xffe7e8fd),
                 // gradient: const LinearGradient(
                 //   colors: [Color(0xFF4B7BFD), Color(0xFF174EE4)],
                 //   stops: [0, 1],
@@ -35,7 +36,7 @@ class forYouButtons extends StatelessWidget {
                 //   end: AlignmentDirectional(-1, 0.64),
                 // ),
                 border: Border.all(color: Colors.black38, width: 0.2),
-                borderRadius: BorderRadius.circular(7),
+                borderRadius: borderRadius2,
               ),
               child: Icon(
                 icon,
@@ -44,13 +45,16 @@ class forYouButtons extends StatelessWidget {
             ),
           ),
         ),
-        Text(
-          btnName,
-          style: SafeGoogleFont(
-            'Poppins',
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xff0F2552),
+        Padding(
+          padding: const EdgeInsets.only(top: 4.0),
+          child: Text(
+            btnName,
+            style: SafeGoogleFont(
+              'Poppins',
+              fontSize: 11,
+              fontWeight: FontWeight.w400,
+              color: const Color(0xff0F2552),
+            ),
           ),
         ),
       ],
@@ -66,10 +70,10 @@ class forYouViewAll extends StatelessWidget {
     return Column(
       children: [
         Material(
-          borderRadius: BorderRadius.circular(7),
-          color: primaryColor,
+          borderRadius: BorderRadius.circular(50),
+          color: Colors.black,
           child: InkWell(
-            borderRadius: BorderRadius.circular(7),
+            borderRadius: BorderRadius.circular(50),
             onTap: () {},
             child: Container(
               width: 50,
@@ -110,13 +114,16 @@ class forYouViewAll extends StatelessWidget {
             ),
           ),
         ),
-        Text(
-          'View All',
-          style: SafeGoogleFont(
-            'Poppins',
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            color: const Color(0xff0F2552),
+        Padding(
+          padding: const EdgeInsets.only(top: 4.0),
+          child: Text(
+            'View All',
+            style: SafeGoogleFont(
+              'Poppins',
+              fontSize: 11,
+              fontWeight: FontWeight.w400,
+              color: const Color(0xff0F2552),
+            ),
           ),
         ),
       ],

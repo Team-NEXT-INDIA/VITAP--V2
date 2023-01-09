@@ -4,12 +4,12 @@ import 'package:myapp/customs/onTapScale.dart';
 
 import '../../../../utils/utils.dart';
 
-class myFacultyBuild extends StatelessWidget {
-  const myFacultyBuild({Key? key}) : super(key: key);
+class MyFacultyBuild extends StatelessWidget {
+  const MyFacultyBuild({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var carPaddings = EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10);
+    var carPaddings = const EdgeInsetsDirectional.fromSTEB(9, 16, 9, 16);
     return Column(
       children: [
         Padding(
@@ -45,7 +45,7 @@ class myFacultyBuild extends StatelessWidget {
                 child: Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(6)),
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   child: Text(
                     "View",
                     style: SafeGoogleFont(
@@ -62,7 +62,7 @@ class myFacultyBuild extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 10),
+          padding: const EdgeInsets.only(left: 10),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -74,10 +74,23 @@ class myFacultyBuild extends StatelessWidget {
                   child: Padding(
                     padding: carPaddings,
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 210,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.width * 0.55,
                       decoration: BoxDecoration(
-                        color: CupertinoColors.secondarySystemBackground,
+                        border: Border.all(
+                          color: Color(0xfffefefe),
+                          strokeAlign: StrokeAlign.outside,
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 0),
+                            spreadRadius: -8,
+                            blurRadius: 35,
+                            color: Color.fromRGBO(0, 0, 0, 0.18),
+                          )
+                        ],
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -91,9 +104,10 @@ class myFacultyBuild extends StatelessWidget {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                             topRight: Radius.circular(10),
                                             topLeft: Radius.circular(10)),
                                         child: Image.asset(
@@ -108,7 +122,7 @@ class myFacultyBuild extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Align(
+                                    const Align(
                                       alignment: AlignmentDirectional(-0.9, 0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -125,10 +139,11 @@ class myFacultyBuild extends StatelessWidget {
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 110, 0, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(9, 110, 0, 0),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -167,10 +182,10 @@ class myFacultyBuild extends StatelessWidget {
                             child: Row(
                               children: [
                                 Flexible(
-                                  flex: 1,
                                   child: Text(
                                     'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.clip,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 13,
@@ -192,10 +207,23 @@ class myFacultyBuild extends StatelessWidget {
                   child: Padding(
                     padding: carPaddings,
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 210,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.width * 0.55,
                       decoration: BoxDecoration(
-                        color: CupertinoColors.secondarySystemBackground,
+                        border: Border.all(
+                          color: Color(0xfffefefe),
+                          strokeAlign: StrokeAlign.outside,
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 0),
+                            spreadRadius: -8,
+                            blurRadius: 35,
+                            color: Color.fromRGBO(0, 0, 0, 0.18),
+                          )
+                        ],
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -209,9 +237,10 @@ class myFacultyBuild extends StatelessWidget {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                             topRight: Radius.circular(10),
                                             topLeft: Radius.circular(10)),
                                         child: Image.asset(
@@ -226,7 +255,7 @@ class myFacultyBuild extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Align(
+                                    const Align(
                                       alignment: AlignmentDirectional(-0.9, 0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -243,10 +272,11 @@ class myFacultyBuild extends StatelessWidget {
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 110, 0, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(9, 110, 0, 0),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -285,10 +315,10 @@ class myFacultyBuild extends StatelessWidget {
                             child: Row(
                               children: [
                                 Flexible(
-                                  flex: 1,
                                   child: Text(
                                     'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.clip,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 13,
@@ -310,10 +340,23 @@ class myFacultyBuild extends StatelessWidget {
                   child: Padding(
                     padding: carPaddings,
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 210,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.width * 0.55,
                       decoration: BoxDecoration(
-                        color: CupertinoColors.secondarySystemBackground,
+                        border: Border.all(
+                          color: Color(0xfffefefe),
+                          strokeAlign: StrokeAlign.outside,
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 0),
+                            spreadRadius: -8,
+                            blurRadius: 35,
+                            color: Color.fromRGBO(0, 0, 0, 0.18),
+                          )
+                        ],
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -327,9 +370,10 @@ class myFacultyBuild extends StatelessWidget {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                             topRight: Radius.circular(10),
                                             topLeft: Radius.circular(10)),
                                         child: Image.asset(
@@ -344,7 +388,7 @@ class myFacultyBuild extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Align(
+                                    const Align(
                                       alignment: AlignmentDirectional(-0.9, 0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -355,16 +399,17 @@ class myFacultyBuild extends StatelessWidget {
                                           child: CircleAvatar(
                                             radius: 39,
                                             backgroundImage: AssetImage(
-                                                "assets/images/home/sibi.jpg"),
+                                                "assets/images/home/faculty.jpg"),
                                           ),
                                         ),
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 110, 0, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(9, 110, 0, 0),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -403,10 +448,10 @@ class myFacultyBuild extends StatelessWidget {
                             child: Row(
                               children: [
                                 Flexible(
-                                  flex: 1,
                                   child: Text(
                                     'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.clip,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 13,
@@ -428,10 +473,23 @@ class myFacultyBuild extends StatelessWidget {
                   child: Padding(
                     padding: carPaddings,
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 210,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: MediaQuery.of(context).size.width * 0.55,
                       decoration: BoxDecoration(
-                        color: CupertinoColors.secondarySystemBackground,
+                        border: Border.all(
+                          color: Color(0xfffefefe),
+                          strokeAlign: StrokeAlign.outside,
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 0),
+                            spreadRadius: -8,
+                            blurRadius: 35,
+                            color: Color.fromRGBO(0, 0, 0, 0.18),
+                          )
+                        ],
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -445,9 +503,10 @@ class myFacultyBuild extends StatelessWidget {
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                             topRight: Radius.circular(10),
                                             topLeft: Radius.circular(10)),
                                         child: Image.asset(
@@ -462,7 +521,7 @@ class myFacultyBuild extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Align(
+                                    const Align(
                                       alignment: AlignmentDirectional(-0.9, 0),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -479,10 +538,11 @@ class myFacultyBuild extends StatelessWidget {
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0, 0),
+                                      alignment:
+                                          const AlignmentDirectional(0, 0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 110, 0, 0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(9, 110, 0, 0),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
@@ -521,10 +581,10 @@ class myFacultyBuild extends StatelessWidget {
                             child: Row(
                               children: [
                                 Flexible(
-                                  flex: 1,
                                   child: Text(
                                     'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.clip,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
                                     style: SafeGoogleFont(
                                       'Poppins',
                                       fontSize: 13,

@@ -26,14 +26,21 @@ class StreamCards extends StatelessWidget {
       child: CustomTap(
         onTap: () {},
         child: Container(
-          decoration: const BoxDecoration(boxShadow: [
-            BoxShadow(
-              color: Color(0x10000000),
-              offset: Offset(0, 20),
-              blurRadius: 30,
-              spreadRadius: -5,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Color(0xfffefefe),
+              strokeAlign: StrokeAlign.outside,
+              width: 0.2,
             ),
-          ]),
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 0),
+                spreadRadius: -8,
+                blurRadius: 35,
+                color: Color.fromRGBO(0, 0, 0, 0.18),
+              )
+            ],
+          ),
           width: MediaQuery.of(context).size.width * 0.38,
           height: MediaQuery.of(context).size.height * 0.25,
           child: Stack(
@@ -44,10 +51,10 @@ class StreamCards extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.38,
                   height: MediaQuery.of(context).size.height * 0.25,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: BorderRadius.circular(7),
                     child: Image.network(
                       image,
                       width: 100,
@@ -73,7 +80,7 @@ class StreamCards extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.022,
                           decoration: BoxDecoration(
                             color: typeColor,
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(7),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +107,7 @@ class StreamCards extends StatelessWidget {
                       height: 50,
                       width: double.infinity,
                       decoration: new BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(7),
                         gradient: new LinearGradient(
                           end: const Alignment(0.0, -1),
                           begin: const Alignment(0.0, 0.4),

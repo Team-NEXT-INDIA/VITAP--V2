@@ -10,15 +10,12 @@ class hIconsWidget extends StatelessWidget {
   final GestureTapCallback? onTap;
 
   const hIconsWidget(
-      {Key? key,
-        required this.title,
-        required this.icon,
-        required this.onTap})
+      {Key? key, required this.title, required this.icon, required this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         Material(
           borderRadius: BorderRadius.circular(50),
@@ -30,10 +27,7 @@ class hIconsWidget extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.15,
               height: MediaQuery.of(context).size.width * 0.15,
               decoration: BoxDecoration(
-                boxShadow: [
-                  primaryBoxShadow
-                ],
-
+                boxShadow: [primaryBoxShadow],
                 shape: BoxShape.circle,
               ),
               child: Center(
@@ -48,14 +42,9 @@ class hIconsWidget extends StatelessWidget {
         ),
         addVerticalSpace(6),
         Text(
-            title,
-          style: SafeGoogleFont(
-              'Poppins',
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-              color: Colors.white
-          ),
-
+          title,
+          style: SafeGoogleFont('Poppins',
+              fontWeight: FontWeight.w500, fontSize: 12, color: Colors.white),
         ),
       ],
     );

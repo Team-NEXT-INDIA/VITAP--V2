@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/screens/Student/Homepage/Homepage.dart';
-import 'package:myapp/screens/Student/Homepage/components/MyFacultyBuild.dart';
-import 'package:myapp/screens/Student/Homepage/components/PromoSlider.dart';
 import 'package:myapp/utils/widget_functions.dart';
 
 import '../../../customs/theme.dart';
@@ -180,8 +177,12 @@ class _TimetablePageState extends State<TimetablePage> {
                                       Container(
                                         margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: MediaQuery.of(context).size.width * 0.8,
-                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.8,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.01,
                                         child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
@@ -317,8 +318,12 @@ class _TimetablePageState extends State<TimetablePage> {
                                       Container(
                                         margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: MediaQuery.of(context).size.width * 0.8,
-                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.8,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.01,
                                         child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
@@ -454,8 +459,12 @@ class _TimetablePageState extends State<TimetablePage> {
                                       Container(
                                         margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: MediaQuery.of(context).size.width * 0.8,
-                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.8,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.01,
                                         child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
@@ -591,8 +600,12 @@ class _TimetablePageState extends State<TimetablePage> {
                                       Container(
                                         margin: const EdgeInsets.only(
                                             bottom: 10, top: 10),
-                                        width: MediaQuery.of(context).size.width * 0.8,
-                                        height: MediaQuery.of(context).size.height * 0.01,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.8,
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.01,
                                         child: const ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10)),

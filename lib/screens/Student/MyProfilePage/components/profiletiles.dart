@@ -9,16 +9,15 @@ class CustomListStyle extends StatelessWidget {
   final GestureTapCallback? onTap;
   bool visible;
 
-   CustomListStyle(
-      {Key? key,
-      required this.icon,
-      required this.title,
-      required this.subtitle,
-      required this.gradientColor,
-      required this.onTap,
-      required this.visible,
-      })
-      : super(key: key);
+  CustomListStyle({
+    Key? key,
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.gradientColor,
+    required this.onTap,
+    required this.visible,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -71,7 +71,7 @@ class StreamSliderBuild extends StatelessWidget {
                 typeColor: Colors.amber,
                 title: 'V-TAPP Ceremony',
                 image:
-                    "https://i.ibb.co/GRpfZ2f/VTAPP-International-Technical-Fest-VIT-AP-University-18-47-screenshot.png",
+                    "https://i.ibb.co/GRpfZ2f/VTAPP-Robotonational-Technical-Fest-VIT-AP-University-18-47-screenshot.png",
                 subtitle: 'EVENT',
               ),
               const StreamCards(

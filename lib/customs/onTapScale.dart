@@ -31,12 +31,12 @@ class CustomTap extends StatefulWidget {
       required this.child,
       this.onTap,
       this.begin = 1.0,
-      this.end = 0.97,
+      this.end = 0.99,
       this.beginDuration = const Duration(milliseconds: 20),
-      this.endDuration = const Duration(milliseconds: 200),
+      this.endDuration = const Duration(milliseconds: 100),
       this.longTapRepeatDuration = const Duration(milliseconds: 100),
-      this.beginCurve: Curves.linear,
-      this.endCurve: Curves.linear,
+      this.beginCurve = Curves.linear,
+      this.endCurve = Curves.linear,
       this.onLongTap,
       this.enableLongTapRepeatEvent = false})
       : super(key: key);
@@ -96,7 +96,7 @@ class _CustomTapState extends State<CustomTap>
             if (widget.enableLongTapRepeatEvent) {
               // the duration before starting the loop event
               await Future.delayed(widget.longTapRepeatDuration);
-              // _isOnTap is to check that the tap is still down (check onPointerUp method which assign _isOnTap to false)
+              // _isOnTap is to check that the tap is still down (check onPoRobotoUp method which assign _isOnTap to false)
               while (_isOnTap)
                 // the duration between every onTap/onLongTap loop event.
                 await Future.delayed(widget.longTapRepeatDuration, () async {

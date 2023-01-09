@@ -20,13 +20,13 @@ class _EducationBuildState extends State<EducationBuild> {
           ),
           TextBox(header: "Applied Degree", text: 'UG'),
           TextBox(
-              header: "Educational Qualification", text: '12TH/INTERMEDIATE'),
+              header: "Educational Qualification", text: '12TH/RobotoMEDIATE'),
           TextBox(header: "Branch / Group Studied", text: 'MPC'),
           TextBox(header: "School Name", text: 'SRI CHAITANYA JUNIOR COLLEGE'),
           TextBox(header: "Medium of study", text: 'ENGLISH'),
           TextBox(
               header: "Board / University",
-              text: 'ANDHRA PRADESH BOARD OF INTERMEDIATE EDUCATION'),
+              text: 'ANDHRA PRADESH BOARD OF RobotoMEDIATE EDUCATION'),
           TextBox(header: "Register No/ Roll No", text: '21092xxxx'),
           TextBox(header: "Class obtained", text: 'FIRST CLASS'),
           TextBox(header: "Year Of Passing/ Passed", text: '2021'),

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myapp/customs/onTapScale.dart';
 import 'package:myapp/screens/OnBoarding/on_boardingSlideshow.dart';
 import 'package:myapp/utils/utils.dart';
 
@@ -97,12 +98,18 @@ class Onboarding extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Material(
-                                        borderRadius: BorderRadius.circular(50),
-                                        color: const Color(0xff132137),
-                                        shadowColor: const Color(0x32002c64),
-                                        elevation: 40,
-                                        child: Container(
+                                      CustomTap(
+                                        onTap: () => Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    LoginPage())),
+                                        child: Material(
+                                          borderRadius:
+                                              BorderRadius.circular(50),
+                                          color: const Color(0xff132137),
+                                          shadowColor: const Color(0x32002c64),
+                                          elevation: 40,
+                                          child: Container(
                                             height: 100,
                                             width: 100,
                                             decoration: BoxDecoration(
@@ -116,28 +123,19 @@ class Onboarding extends StatelessWidget {
                                                 ),
                                               ],
                                             ),
-                                            child: InkWell(
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                              onTap: () => Navigator.of(context)
-                                                  .push(MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          LoginPage())),
-
-                                              splashColor: Colors.white10, //
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(0),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Image.asset(
-                                                        'assets/images/on-boarding/arrow-right.png')
-                                                  ],
-                                                ),
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(0),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                      'assets/images/on-boarding/arrow-right.png')
+                                                ],
                                               ),
-                                            )),
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),

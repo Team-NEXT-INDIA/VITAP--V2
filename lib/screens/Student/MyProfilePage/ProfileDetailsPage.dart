@@ -41,13 +41,6 @@ class _ProfileDetailsPageState extends State<ProfileDetailsPage>
                 snap: false,
                 stretch: true,
                 pinned: true,
-                title: Text(
-                  "My Profile",
-                  style: SafeGoogleFont('Poppins',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: secondaryBlue),
-                ),
                 backgroundColor: Colors.white,
                 flexibleSpace: FlexibleSpaceBar(
                   collapseMode: CollapseMode.parallax,

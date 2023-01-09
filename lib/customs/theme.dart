@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 
 Color primaryColor = const Color(0xFF004bff);
 Color scaffoldBackground2 = const Color(0xffF9F9F9);
-Color scaffoldBackground = const Color(0xFFFFFFFF);
+Color scaffoldBackground = const Color(0xFFf0f1fc);
 
 Color iconPrimary = const Color(0xff212121);
-Color footerBackground = const Color(0xFFF0F0F0);
+Color footerBackground = const Color(0xFFfefefe);
 Color titlePrimary = const Color(0xff232323);
 Color secondaryBlue = const Color(0xFF0a2885);
 Color homeHeadericonbg = Colors.white;
@@ -38,8 +38,9 @@ var primaryBoxShadowLite = BoxShadow(
   offset: Offset(10, 14),
   spreadRadius: -14,
   blurRadius: 39,
-  color: Color.fromRGBO(87, 87, 87, 0.44313725490196076),
+  color: Color.fromRGBO(87, 87, 87, 0.30196078431372547),
 );
+
 // Container Decorations
 var containerDecoration = BoxDecoration(
   boxShadow: const [
@@ -51,7 +52,12 @@ var containerDecoration = BoxDecoration(
       // color: Color.fromRGBO(0, 0, 0, 0.22),
     ),
   ],
-  color: Colors.white,
+  color: Color(0xfff8f8fe),
+  border: Border.all(
+    color: Color(0xfffefefe),
+    strokeAlign: StrokeAlign.outside,
+    width: 0.3,
+  ),
   borderRadius: BorderRadius.circular(16),
 );
 
