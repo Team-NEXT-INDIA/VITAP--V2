@@ -1,6 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/customs/onTapScale.dart';
+import 'package:myapp/utils/widget_functions.dart';
 
 import '../../../../utils/utils.dart';
 
@@ -61,550 +62,507 @@ class MyFacultyBuild extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomTap(
-                  onTap: () {},
-                  child: Padding(
-                    padding: carPaddings,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.width * 0.55,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xfffefefe),
-                          strokeAlign: StrokeAlign.outside,
-                          width: 1,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 0),
-                            spreadRadius: -8,
-                            blurRadius: 35,
-                            color: Color.fromRGBO(0, 0, 0, 0.18),
-                          )
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
+        CarouselSlider(
+          items: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xfffefefe),
+                      strokeAlign: StrokeAlign.outside,
+                      width: 1,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        spreadRadius: -8,
+                        blurRadius: 35,
+                        color: Color.fromRGBO(0, 0, 0, 0.18),
+                      )
+                    ],
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(8),
+                      bottomRight: Radius.circular(8),
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(8),
+                    ),
+                    color: CupertinoColors.secondarySystemBackground),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.36,
+                      child: Stack(
+                        alignment: const AlignmentDirectional(0, 1),
                         children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                            topRight: Radius.circular(10),
-                                            topLeft: Radius.circular(10)),
-                                        child: Image.asset(
-                                          'assets/images/icons/default_faculty_header.png',
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.13,
-                                          fit: BoxFit.cover,
-                                        ),
+                          Align(
+                            alignment: const AlignmentDirectional(0, -1),
+                            child: Container(
+                              height: MediaQuery.of(context).size.width * 0.25,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(0),
+                                    bottomRight: Radius.circular(0),
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8),
+                                  ),
+                                  color: Colors.white60),
+                              child: ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(0),
+                                  bottomRight: Radius.circular(0),
+                                  topLeft: Radius.circular(8),
+                                  topRight: Radius.circular(8),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/icons/default_faculty_header.png',
+                                  width: double.infinity,
+                                  height: MediaQuery.of(context).size.width * 1,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: const AlignmentDirectional(0, 1),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16, 0, 24, 0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 12),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.width *
+                                              0.20,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.20,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.white70,
+                                        shape: BoxShape.circle,
                                       ),
-                                    ),
-                                    const Align(
-                                      alignment: AlignmentDirectional(-0.9, 0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 70, 0, 0),
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          radius: 42,
-                                          child: CircleAvatar(
-                                            radius: 39,
-                                            backgroundImage: AssetImage(
-                                                "assets/images/home/faculty.jpg"),
+                                        padding:
+                                            const EdgeInsetsDirectional.all(4),
+                                        child: Container(
+                                          width: 80,
+                                          height: 80,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Image.asset(
+                                              "assets/images/home/faculty.jpg",
+                                              width: 60,
+                                              height: 60,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(9, 110, 0, 0),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Dr. E. Ajith Jubilson',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
-                                                color: const Color(0xff43434E),
-                                              ),
-                                            ),
-                                            Text(
-                                              'CSE2004',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w300,
-                                                color: const Color(0xe6000000),
-                                              ),
-                                            ),
-                                          ],
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'AB-2 G03',
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          color: CupertinoColors.label,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0, left: 15),
-                            child: Row(
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    style: SafeGoogleFont(
-                                      'Poppins',
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: const Color(0x99000000),
-                                    ),
+                                    ],
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                ),
-                CustomTap(
-                  onTap: () {},
-                  child: Padding(
-                    padding: carPaddings,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.width * 0.55,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xfffefefe),
-                          strokeAlign: StrokeAlign.outside,
-                          width: 1,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 0),
-                            spreadRadius: -8,
-                            blurRadius: 35,
-                            color: Color.fromRGBO(0, 0, 0, 0.18),
-                          )
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                            topRight: Radius.circular(10),
-                                            topLeft: Radius.circular(10)),
-                                        child: Image.asset(
-                                          'assets/images/icons/default_faculty_header.png',
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.13,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    const Align(
-                                      alignment: AlignmentDirectional(-0.9, 0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 70, 0, 0),
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          radius: 42,
-                                          child: CircleAvatar(
-                                            radius: 39,
-                                            backgroundImage: AssetImage(
-                                                "assets/images/home/faculty.jpg"),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(9, 110, 0, 0),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Dr. E. Ajith Jubilson',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
-                                                color: const Color(0xff43434E),
-                                              ),
-                                            ),
-                                            Text(
-                                              'CSE2004',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w300,
-                                                color: const Color(0xe6000000),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0, left: 15),
-                            child: Row(
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    style: SafeGoogleFont(
-                                      'Poppins',
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: const Color(0x99000000),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
+                      child: Text(
+                        'Dr. E. Ajith Jubilson',
+                        style: SafeGoogleFont("Poppins",
+                            fontWeight: FontWeight.w700, fontSize: 15),
                       ),
                     ),
-                  ),
-                ),
-                CustomTap(
-                  onTap: () {},
-                  child: Padding(
-                    padding: carPaddings,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.width * 0.55,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xfffefefe),
-                          strokeAlign: StrokeAlign.outside,
-                          width: 1,
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
+                      child: Text(
+                        'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: SafeGoogleFont(
+                          'Poppins',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0x99000000),
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 0),
-                            spreadRadius: -8,
-                            blurRadius: 35,
-                            color: Color.fromRGBO(0, 0, 0, 0.18),
-                          )
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                            topRight: Radius.circular(10),
-                                            topLeft: Radius.circular(10)),
-                                        child: Image.asset(
-                                          'assets/images/icons/default_faculty_header.png',
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.13,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    const Align(
-                                      alignment: AlignmentDirectional(-0.9, 0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 70, 0, 0),
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          radius: 42,
-                                          child: CircleAvatar(
-                                            radius: 39,
-                                            backgroundImage: AssetImage(
-                                                "assets/images/home/faculty.jpg"),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(9, 110, 0, 0),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Dr. E. Ajith Jubilson',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
-                                                color: const Color(0xff43434E),
-                                              ),
-                                            ),
-                                            Text(
-                                              'CSE2004',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w300,
-                                                color: const Color(0xe6000000),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0, left: 15),
-                            child: Row(
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    style: SafeGoogleFont(
-                                      'Poppins',
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: const Color(0x99000000),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
                       ),
                     ),
-                  ),
+                    addVerticalSpace(15),
+                  ],
                 ),
-                CustomTap(
-                  onTap: () {},
-                  child: Padding(
-                    padding: carPaddings,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      height: MediaQuery.of(context).size.width * 0.55,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xfffefefe),
-                          strokeAlign: StrokeAlign.outside,
-                          width: 1,
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 0),
-                            spreadRadius: -8,
-                            blurRadius: 35,
-                            color: Color.fromRGBO(0, 0, 0, 0.18),
-                          )
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                            topRight: Radius.circular(10),
-                                            topLeft: Radius.circular(10)),
-                                        child: Image.asset(
-                                          'assets/images/icons/default_faculty_header.png',
-                                          width:
-                                              MediaQuery.of(context).size.width,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.13,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    const Align(
-                                      alignment: AlignmentDirectional(-0.9, 0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 70, 0, 0),
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          radius: 42,
-                                          child: CircleAvatar(
-                                            radius: 39,
-                                            backgroundImage: AssetImage(
-                                                "assets/images/home/faculty.jpg"),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(0, 0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(9, 110, 0, 0),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Dr. E. Ajith Jubilson',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 13,
-                                                fontWeight: FontWeight.bold,
-                                                color: const Color(0xff43434E),
-                                              ),
-                                            ),
-                                            Text(
-                                              'CSE2004',
-                                              style: SafeGoogleFont(
-                                                'Poppins',
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w300,
-                                                color: const Color(0xe6000000),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0, left: 15),
-                            child: Row(
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    style: SafeGoogleFont(
-                                      'Poppins',
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: const Color(0x99000000),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xfffefefe),
+                      strokeAlign: StrokeAlign.outside,
+                      width: 1,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        spreadRadius: -8,
+                        blurRadius: 35,
+                        color: Color.fromRGBO(0, 0, 0, 0.18),
+                      )
+                    ],
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(8),
+                      bottomRight: Radius.circular(8),
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(8),
+                    ),
+                    color: CupertinoColors.secondarySystemBackground),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.36,
+                      child: Stack(
+                        alignment: const AlignmentDirectional(0, 1),
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0, -1),
+                            child: Container(
+                              height: MediaQuery.of(context).size.width * 0.25,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(0),
+                                    bottomRight: Radius.circular(0),
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8),
+                                  ),
+                                  color: Colors.white60),
+                              child: ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(0),
+                                  bottomRight: Radius.circular(0),
+                                  topLeft: Radius.circular(8),
+                                  topRight: Radius.circular(8),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/icons/default_faculty_header.png',
+                                  width: double.infinity,
+                                  height: MediaQuery.of(context).size.width * 1,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: const AlignmentDirectional(0, 1),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16, 0, 24, 0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 12),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.width *
+                                              0.20,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.20,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.white70,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Padding(
+                                        padding:
+                                            const EdgeInsetsDirectional.all(4),
+                                        child: Container(
+                                          width: 80,
+                                          height: 80,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Image.asset(
+                                              "assets/images/home/faculty.jpg",
+                                              width: 60,
+                                              height: 60,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'AB-2 G03',
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          color: CupertinoColors.label,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
+                      child: Text(
+                        'Dr. E. Ajith Jubilson',
+                        style: SafeGoogleFont("Poppins",
+                            fontWeight: FontWeight.w700, fontSize: 15),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
+                      child: Text(
+                        'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: SafeGoogleFont(
+                          'Poppins',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0x99000000),
+                        ),
+                      ),
+                    ),
+                    addVerticalSpace(15),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xfffefefe),
+                      strokeAlign: StrokeAlign.outside,
+                      width: 1,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        spreadRadius: -8,
+                        blurRadius: 35,
+                        color: Color.fromRGBO(0, 0, 0, 0.18),
+                      )
+                    ],
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(8),
+                      bottomRight: Radius.circular(8),
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(8),
+                    ),
+                    color: CupertinoColors.secondarySystemBackground),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.width * 0.36,
+                      child: Stack(
+                        alignment: const AlignmentDirectional(0, 1),
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0, -1),
+                            child: Container(
+                              height: MediaQuery.of(context).size.width * 0.25,
+                              decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(0),
+                                    bottomRight: Radius.circular(0),
+                                    topLeft: Radius.circular(8),
+                                    topRight: Radius.circular(8),
+                                  ),
+                                  color: Colors.white60),
+                              child: ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(0),
+                                  bottomRight: Radius.circular(0),
+                                  topLeft: Radius.circular(8),
+                                  topRight: Radius.circular(8),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/icons/default_faculty_header.png',
+                                  width: double.infinity,
+                                  height: MediaQuery.of(context).size.width * 1,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: const AlignmentDirectional(0, 1),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16, 0, 24, 0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 0, 12),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.width *
+                                              0.20,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.20,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.white70,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Padding(
+                                        padding:
+                                            const EdgeInsetsDirectional.all(4),
+                                        child: Container(
+                                          width: 80,
+                                          height: 80,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Image.asset(
+                                              "assets/images/home/faculty.jpg",
+                                              width: 60,
+                                              height: 60,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'AB-2 G03',
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          color: CupertinoColors.label,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 8, 0, 0),
+                      child: Text(
+                        'Dr. E. Ajith Jubilson',
+                        style: SafeGoogleFont("Poppins",
+                            fontWeight: FontWeight.w700, fontSize: 15),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
+                      child: Text(
+                        'Specialization Areas: Software Agents, Artificial Intelligence, Machine Learning',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: SafeGoogleFont(
+                          'Poppins',
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0x99000000),
+                        ),
+                      ),
+                    ),
+                    addVerticalSpace(15),
+                  ],
+                ),
+              ),
+            ),
+          ],
+          options: CarouselOptions(
+            enableInfiniteScroll: false,
+            disableCenter: false,
+            pageSnapping: true,
+            height: MediaQuery.of(context).size.width * 0.65,
+            autoPlay: false,
+            enlargeCenterPage: false,
+            viewportFraction: 0.89,
+            padEnds: false,
+            initialPage: 0,
           ),
-        )
+        ),
       ],
     );
   }
