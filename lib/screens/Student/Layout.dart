@@ -6,7 +6,7 @@ import 'package:myapp/screens/Student/Homepage/Homepage.dart';
 import 'package:myapp/screens/Student/MyProfilePage/Profilepage.dart';
 
 import '../../customs/theme.dart';
-import 'TimetablePage/Timetablepage.dart';
+import 'AttendancePage/AttendancePage.dart';
 
 class Layout extends StatefulWidget {
   const Layout({super.key});
@@ -21,7 +21,7 @@ class _LayoutState extends State<Layout> {
   final List<Widget> pages = [
     const HomePage(),
     const HomePage(),
-    const TimetablePage(),
+    const AttendancePage(),
     const HomePage(),
     const profilePage(),
   ];

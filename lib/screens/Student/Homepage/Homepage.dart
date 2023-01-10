@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_drawer/inner_drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,6 +13,7 @@ import 'package:myapp/utils/utils.dart';
 
 import '../../../customs/theme.dart';
 import '../../../utils/widget_functions.dart';
+import '../PaymentsPage/payments_page.dart';
 import 'components/CustomButtons.dart';
 import 'components/Drawer.dart';
 import 'components/MyButton.dart';
@@ -314,6 +316,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                       icon: Icons.file_copy,
                                     ),
                                     forYouButtons(
+                                      onTap: () => Navigator.of(context).push(
+                                          CupertinoPageRoute(
+                                              builder: (context) =>
+                                                  PaymentPage())),
                                       btnName: 'Fees',
                                       icon: Icons.payment_outlined,
                                     ),

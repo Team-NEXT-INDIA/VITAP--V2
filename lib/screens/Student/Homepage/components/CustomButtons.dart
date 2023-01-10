@@ -8,8 +8,10 @@ import '../../../../utils/utils.dart';
 class forYouButtons extends StatelessWidget {
   final String btnName;
   final IconData icon;
+  final Function()? onTap;
 
-  const forYouButtons({Key? key, required this.btnName, required this.icon})
+  const forYouButtons(
+      {Key? key, required this.btnName, required this.icon, this.onTap})
       : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class forYouButtons extends StatelessWidget {
           borderRadius: borderRadius2,
           color: Colors.transparent,
           child: CustomTap(
-            onTap: () {},
+            onTap: onTap,
             child: Container(
               width: 50,
               height: 50,

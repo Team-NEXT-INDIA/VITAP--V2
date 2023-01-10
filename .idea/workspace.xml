@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6db23d-be83-4a6a-a4c0-a3ee7ad77968" name="Changes" comment="Added Profile details page structure">
+      <change afterPath="$PROJECT_DIR$/lib/customs/bottomsheet.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/completed_payments.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/components/select_payment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/details_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/payments_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/pending_payments.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/customs/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/customs/theme.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/Layout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/MyProfilePage/components/HeaderIcons.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Student/TimetablePage/Timetablepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Student/AttendancePage/AttendancePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Testings/evant_builds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Testings/evant_builds.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,15 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/components/PromoSlider.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/Homepage.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/components/MyFacultyBuild.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/components/UpcomingEvents.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/components/Footer.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/customs/theme.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/Student/Homepage/components/CustomButtons.dart" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -67,6 +84,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/screens/Student/PaymentsPage/components" />
       <recent name="$PROJECT_DIR$/assets/images/on-boarding" />
       <recent name="$PROJECT_DIR$/assets/images/home" />
     </key>

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/utils/widget_functions.dart';
 
@@ -8,14 +7,14 @@ import '../../../utils/utils.dart';
 
 enum ExerciseFilter { ALL, LESS }
 
-class TimetablePage extends StatefulWidget {
-  const TimetablePage({Key? key}) : super(key: key);
+class AttendancePage extends StatefulWidget {
+  const AttendancePage({Key? key}) : super(key: key);
 
   @override
-  State<TimetablePage> createState() => _TimetablePageState();
+  State<AttendancePage> createState() => _AttendancePageState();
 }
 
-class _TimetablePageState extends State<TimetablePage> {
+class _AttendancePageState extends State<AttendancePage> {
   bool favorite = false;
   final List<String> _filters = <String>[];
 

@@ -29,7 +29,7 @@ class headerIcons extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => const ProfileDetailsPage()),
                 );
               },
